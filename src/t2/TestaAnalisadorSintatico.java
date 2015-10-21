@@ -33,6 +33,7 @@ public class TestaAnalisadorSintatico {
 //         out.println(pce.getMessage());
 //         }
         }
+
         
 /* não sei q diabos é isso */              
 //        if (!out.isModificado()) {
@@ -44,6 +45,7 @@ public class TestaAnalisadorSintatico {
 //        } else {
 //            out.println("Fim da analise. Com erros sintaticos.");
 //        }
+
         
         // descomentar quando fizer o semântico:
         // out.println("Fim da compilacao");
