@@ -48,6 +48,36 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitTags(PortHTMLParser.TagsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#menu_fixo}.
+	 * @param ctx the parse tree
+	 */
+	void enterMenu_fixo(PortHTMLParser.Menu_fixoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#menu_fixo}.
+	 * @param ctx the parse tree
+	 */
+	void exitMenu_fixo(PortHTMLParser.Menu_fixoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#div}.
+	 * @param ctx the parse tree
+	 */
+	void enterDiv(PortHTMLParser.DivContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#div}.
+	 * @param ctx the parse tree
+	 */
+	void exitDiv(PortHTMLParser.DivContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#container}.
+	 * @param ctx the parse tree
+	 */
+	void enterContainer(PortHTMLParser.ContainerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#container}.
+	 * @param ctx the parse tree
+	 */
+	void exitContainer(PortHTMLParser.ContainerContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#link}.
 	 * @param ctx the parse tree
 	 */

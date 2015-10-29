@@ -18,8 +18,8 @@ tags
   /* | botao | slide-show | div | container | menu-fixo */
 ;
 
-/*
-menu-fixo
+
+menu_fixo
 : 'menu-fixo'  link+ 'fim-fixo'
 ;
 
@@ -30,7 +30,7 @@ div
 container
 : 'container'
 ;
-*/
+
 
 
 link
@@ -42,11 +42,11 @@ paragrafo
 ;
 
 texto
-: estado? 'texto' CADEIA* 'fim-texto'
+: estado? 'texto' CADEIA 'fim-texto'
 ;
 
 botao
-  : estado? 'botao' CADEIA* 'fim-botao'
+  : estado? 'botao' CADEIA 'fim-botao'
   ;
   
 estado
@@ -107,11 +107,11 @@ slide_show
         ;
 
 titulo_site
-: CADEIA*
+: CADEIA
 ;
 
 nome_pagina
-: CADEIA*
+: CADEIA
 ;
 
 url

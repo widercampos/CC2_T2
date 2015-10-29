@@ -1,0 +1,22 @@
+site
+
+cabecalho  T2 - Construção de Compiladores 2    fim-cabeçalho
+
+corpo
+cor-fundo azul   fim-cor-fundo
+cor-texto branco fim cor-texto
+titulo PortHTML fim-titulo
+sub-titulo Linguagem Natural para Html fim-sub-titulo
+
+paragrafo 
+       De maneira imperativa, usuários irão utilizar a linguagem criada <br>
+       para desenvolver páginas ( inicialmente simples) de maneira bastante intuitiva.<br>
+       O primeiro passo (entrada) será a linguagem PortHTML. Após a compilação, será gerado<br>
+       um arquivo HTML, com seus padrões formais definidos.<br>
+       Um compilador PortHTML terá como função principal a interpretação da linguagem PortHTML e geração do código HTML.
+fim-paragrafo
+
+link Index.html Pagina Inicial fim-link
+
+fim-corpo
+fim-site

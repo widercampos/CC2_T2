@@ -1,0 +1,16 @@
+java -jar "C:\Comp2\projeto\comp2T1\dist\comp2T1.jar"
+
+ C:\Comp2\casosDeTesteT1\3.arquivos_sem_erros\1.entrada\1.declaracao_leitura_impressao_inteiro.alg
+ c:\temp\c.txt
+
+
+java -jar "c:\users\j\desktop\cc2\t2\dist\t1.jar"
+c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\1.Titulo.txt
+c:\Users\j\Desktop\PortHTML.txt
+
+
+cd desktop\cc2\t2\dist
+
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\1.Titulo.txt" c:\Users\j\Desktop\PortHTML.txt
+
+java -jar c:\Users\J\Downloads\antlr-4.5.1-complete.jar C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 -package t2 -o C:\Users\J\Desktop\CC2\T2\src\t2 -listener
