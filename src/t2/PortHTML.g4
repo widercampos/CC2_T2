@@ -15,7 +15,7 @@ corpo
 tags
 : link | paragrafo | texto | titulo | subtitulo |
   cor_fundo | imagem | mapa
-  /* | botao | slide-show | div | container | menu-fixo */
+ | botao | slide_show | div | container | menu_fixo
 ;
 
 
@@ -31,8 +31,6 @@ container
 : 'container'
 ;
 
-
-
 link
 : 'link' url nome_pagina 'fim-link'
 ;
@@ -46,7 +44,7 @@ texto
 ;
 
 botao
-  : estado? 'botao' CADEIA 'fim-botao'
+  : 'botao' estado? CADEIA 'fim-botao'
   ;
   
 estado
