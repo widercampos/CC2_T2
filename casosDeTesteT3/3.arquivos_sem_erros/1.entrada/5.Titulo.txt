@@ -1,0 +1,14 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo
+titulo "Construção de Compiladores 2"  fim-titulo
+subtitulo "PortHTML"    fim-subtitulo
+texto aviso "Caso de Teste Número 5" fim-texto
+botao sucesso "Botao Sucesso" fim-botao
+link  "Sobre.html" "Ir Para Sobre"       fim-link
+
+
+fim-corpo
+fim-site

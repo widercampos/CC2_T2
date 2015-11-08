@@ -11,6 +11,16 @@ c:\Users\j\Desktop\PortHTML.txt
 
 cd desktop\cc2\t2\dist
 
-java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\1.Titulo.txt" c:\Users\j\Desktop\PortHTML.txt
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\1.Titulo.txt" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\2.Botoes.Html" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\3.Texto.txt" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\4.Link.txt" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\5.Titulo.txt" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\6.CorFundo.txt" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\7.Imagem.txt" c:\Users\j\Desktop\PortHTML.html
+java -jar t2.jar  "c:\Users\j\Desktop\CC2\t2\casosDeTesteT3\3.arquivos_sem_erros\1.entrada\8.Mapa.txt" c:\Users\j\Desktop\PortHTML.html
+
+
+AIzaSyD4-zJX5CdJAFYqh5cnD3MV0FHPQZi_5ME 
 
 java -jar c:\Users\J\Downloads\antlr-4.5.1-complete.jar C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 -package t2 -o C:\Users\J\Desktop\CC2\T2\src\t2 -listener

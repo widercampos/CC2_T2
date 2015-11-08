@@ -1,0 +1,13 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo
+
+texto aviso "Teste de Link" fim-texto
+botao sucesso "Link" fim-botao
+link  "Sobre.html" "Ir Para Sobre"       fim-link
+
+
+fim-corpo
+fim-site

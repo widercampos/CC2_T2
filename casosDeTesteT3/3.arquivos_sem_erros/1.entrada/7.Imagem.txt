@@ -1,0 +1,15 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo azul
+titulo "Construção de Compiladores 2"  fim-titulo
+subtitulo "PortHTML"    fim-subtitulo
+texto aviso "Caso de Teste Número 5" fim-texto
+botao sucesso "Botao Sucesso" fim-botao
+imagem  "C:\Users\J\Desktop\CC2\T2\bootstrap\img\imagem.jpg" dimensoes 200 300 fim-dimensoes  fim-imagem
+link  "Sobre.html" "Ir Para Sobre"       fim-link
+
+
+fim-corpo
+fim-site

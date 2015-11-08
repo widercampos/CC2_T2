@@ -1,0 +1,16 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo
+
+botao aviso "Aviso!" fim-botao
+
+botao alerta "Alerta!" fim-botao
+
+botao sucesso "Sucesso!" fim-botao
+
+botao erro "Erro!" fim-botao
+
+fim-corpo
+fim-site

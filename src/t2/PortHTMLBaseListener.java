@@ -1,4 +1,4 @@
-// Generated from PortHTML.g4 by ANTLR 4.5.1
+// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
 package t2;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -107,18 +107,6 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLink(PortHTMLParser.LinkContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterParagrafo(PortHTMLParser.ParagrafoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitParagrafo(PortHTMLParser.ParagrafoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -1,0 +1,19 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo
+
+texto aviso "Aviso!" fim-texto
+
+texto alerta "Alerta!" fim-texto
+
+texto sucesso "Sucesso!" fim-texto
+
+texto erro "Erro!" fim-texto
+
+
+texto  "Normal" fim-texto
+
+fim-corpo
+fim-site

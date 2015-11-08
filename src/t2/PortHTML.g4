@@ -9,12 +9,12 @@ cabecalho
 ;
 
 corpo
-: 'corpo' tags* 'fim-corpo'
+: 'corpo' cor_fundo? tags* 'fim-corpo'
 ;
 
 tags
-: link | paragrafo | texto | titulo | subtitulo |
-  cor_fundo | imagem | mapa
+: link | texto | titulo | subtitulo |
+  cor_fundo |imagem | mapa
  | botao | slide_show | div | container | menu_fixo
 ;
 
@@ -34,13 +34,13 @@ container
 link
 : 'link' url nome_pagina 'fim-link'
 ;
-
+/*
 paragrafo
 : 'paragrafo' texto* 'fim-paragrafo'
 ;
-
+*/
 texto
-: estado? 'texto' CADEIA 'fim-texto'
+:  'texto' estado? CADEIA 'fim-texto'
 ;
 
 botao
@@ -52,15 +52,15 @@ estado
 ;
 
 titulo
-: 'titulo' texto 'fim-titulo'
+: 'titulo' CADEIA 'fim-titulo'
 ;
 
 subtitulo
-: 'subtitulo' texto 'fim-subtitulo'
+: 'subtitulo' CADEIA 'fim-subtitulo'
 ;
 
 cor_fundo
-: 'cor-fundo' nome_cor 'fim-cor-fundo'
+:  nome_cor 
 ;
 
 cor_texto
@@ -76,16 +76,15 @@ dimensoes
 ;
   
 largura
- : INT*
+ : INT
  ; 
        
 altura
-: INT*
+: INT
 ;
   
 mapa
-: 'mapa' pais ',' cidade 'fim-mapa'
-    | 'mapa' coordenadas 'fim-mapa'
+: 'mapa' coordenadas 'fim-mapa'
 ;
   
 pais
@@ -97,7 +96,7 @@ cidade
 ;
 
 coordenadas
-        : COORD COORD
+        : LATITUDE LONGITUDE
         ;
 
 slide_show
@@ -117,7 +116,7 @@ url
 ;
 nome_cor
 : 'azul' | 'vermelho' | 'branco' | 'preto' | 'verde' |
-  'amarelo' | 'rosa' | 'cinza' | 'roxo'
+  'amarelo' | 'rosa' | 'cinza' 
 ;
 
 COMENTARIO
@@ -137,10 +136,16 @@ CADEIA:  ( 'a'..'z' | 'A' .. 'Z' | '_' | '+' | '-' | '*' | '!' | '?' | '&' | '@'
 INT: ('0'..'9')+
    ;
 
-COORD
+LATITUDE
 : ('+'|'-')('0'..'9')?('0'..'9')+'.'
   ('0'..'9')('0'..'9')('0'..'9')('0'..'9')
   ;
+
+LONGITUDE
+: ('+'|'-')('0'..'9')?('0'..'9')+'.'
+  ('0'..'9')('0'..'9')('0'..'9')('0'..'9')
+  ;
+
 
 WS
     : (' ' | '\t' | '\r' | '\n') -> channel(HIDDEN)

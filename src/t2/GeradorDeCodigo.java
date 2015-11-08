@@ -45,7 +45,7 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
                 + " \n"
                 + "<link rel=\"stylesheet\" href=\"css/bootstrap-responsive.css\">"
                 + " \n"
-                + "<TITLE>" + ctx.titulo_site().getText() + "</TITLE>" + " \n");
+                + "<TITLE>" + TiraAspas(ctx.titulo_site().getText()) + "</TITLE>" + " \n");
     }
 
     @Override
@@ -55,9 +55,43 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
 
     @Override
     public void enterCorpo(PortHTMLParser.CorpoContext ctx) {
-        out.printCodigo("<BODY>" + "\n");
+        if (ctx.cor_fundo() !=null)
+        {
+            out.printCodigo("<BODY Bgcolor=" + "\"" + MudaCor(ctx.cor_fundo().getText()) + "\">" + "\n");
+        }
+        else
+        {out.printCodigo("<BODY>" + "\n");}
     }
 
+    public String MudaCor(String cor){
+    switch (cor) {
+                case "azul":
+                    cor="blue";
+                    break;
+                case "vermelho":
+                    cor="red";
+                    break;
+                case "branco":
+                    cor="white";
+                    break;
+                case "preto":
+                    cor="black";
+                    break;
+                case "verde":
+                    cor="green";
+                    break;
+                case "amarelo":
+                    cor="yellow";
+                    break;
+                case "rosa":
+                    cor="pink";
+                    break;
+                case "cinza":
+                    cor="gray";
+                    break;
+            }
+    return cor;
+    }
     @Override
     public void exitCorpo(PortHTMLParser.CorpoContext ctx) {
         out.printCodigo("</BODY>" + "\n");
@@ -65,7 +99,7 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
 
     @Override
     public void enterBotao(PortHTMLParser.BotaoContext ctx) {
-
+        out.printCodigo("\n");
         out.printCodigo("<button class=\"btn ");
         if (ctx.estado() != null) {
             String tipoEstado = ctx.estado().getText();
@@ -93,4 +127,101 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
 
     }
 
+    @Override
+    public void enterTexto(PortHTMLParser.TextoContext ctx) {
+        out.printCodigo("\n");  
+        out.printCodigo("<p class=\"text");
+          if (ctx.estado() != null) {
+          String tipoEstado = ctx.estado().getText();
+
+            switch (tipoEstado) {
+                case "aviso":
+                    out.printCodigo("-info\">");
+                    break;
+                case "alerta":
+                    out.printCodigo("-warning\">");
+                    break;
+                case "sucesso":
+                    out.printCodigo("-success\">");
+                    break;
+                case "erro":
+                    out.printCodigo("-error\">");
+                    break;
+            }
+        } else {
+            out.printCodigo("\">");
+        }
+
+        out.printCodigo(TiraAspas(ctx.CADEIA().toString()));
+        out.printCodigo("</p></br>");
+    }
+
+    @Override
+    public void enterLink(PortHTMLParser.LinkContext ctx) {
+        //<a href="Sobre.html"  > Sobre o Trabalho </a>
+        out.printCodigo("\n");
+        out.printCodigo("<a href=\"" );
+        out.printCodigo(TiraAspas(ctx.url().CADEIA().toString()) +"\"  " + "> ");
+        out.printCodigo(TiraAspas(ctx.nome_pagina().CADEIA().toString()));
+        out.printCodigo(" </a>");
+        out.printCodigo("<br>");
+    }
+
+    @Override
+    public void enterTitulo(PortHTMLParser.TituloContext ctx) {
+        out.printCodigo("\n");
+        out.printCodigo("<h1>"+ TiraAspas(ctx.CADEIA().toString())+"</h1>");
+        out.printCodigo(" \n <br>");
+    }
+
+    @Override
+    public void enterSubtitulo(PortHTMLParser.SubtituloContext ctx) {
+        out.printCodigo("\n");
+        out.printCodigo("<h3>"+ TiraAspas(ctx.CADEIA().toString())+"</h3>");
+        out.printCodigo(" \n <br>");
+    }
+
+    @Override
+    public void enterImagem(PortHTMLParser.ImagemContext ctx) {
+        out.printCodigo("\n");
+        out.printCodigo("<img src=" + ctx.url().getText()  );
+        out.printCodigo(" height=\"" + ctx.dimensoes().altura().getText() +"\"");
+        out.printCodigo(" width=\"" + ctx.dimensoes().largura().getText() +"\"");
+        out.printCodigo(">");
+        out.printCodigo(" \n <br>");
+    }
+
+    @Override
+    public void enterMapa(PortHTMLParser.MapaContext ctx) {
+        
+        out.printCodigo("\n");
+        out.printCodigo(" <style>\n"
+                + "     \n"
+                + "      #map {\n"
+                + "        width: 450px;\n"
+                + "        height: 400px;\n"
+                + "      }\n"
+                + "    </style>");
+        out.printCodigo("<div id=\"map\"></div>\n"
+                + "    <script>\n"
+                + "\n"
+                + "var map;\n"
+                + "function initMap() {\n"
+                + "  map = new google.maps.Map(document.getElementById('map'), {\n"
+                + "    center: {lat:"+ctx.coordenadas().LATITUDE()+", lng:"+ctx.coordenadas().LONGITUDE()+"},\n"
+                + "    zoom: 8\n"
+                + "  });\n"
+                + "}\n"
+                + "\n"
+                + "    </script>\n"
+                + "    <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDdUWK9joLAF3RC-_DbZLr6A-IXhXOk4So&callback=initMap\"\n"
+                + "        async defer></script>");
+        
+    }
+    
+    
+ 
+    
+    
+    
 }

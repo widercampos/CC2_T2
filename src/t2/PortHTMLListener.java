@@ -1,4 +1,4 @@
-// Generated from PortHTML.g4 by ANTLR 4.5.1
+// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
 package t2;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -87,16 +87,6 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLink(PortHTMLParser.LinkContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#paragrafo}.
-	 * @param ctx the parse tree
-	 */
-	void enterParagrafo(PortHTMLParser.ParagrafoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#paragrafo}.
-	 * @param ctx the parse tree
-	 */
-	void exitParagrafo(PortHTMLParser.ParagrafoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#texto}.
 	 * @param ctx the parse tree
