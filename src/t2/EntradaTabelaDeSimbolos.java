@@ -3,14 +3,11 @@ package t2;
 public class EntradaTabelaDeSimbolos {
     private String lexema;
     private String tipo;
-    private Categoria categoria;
-    private TabelaDeSimbolos subTabela;
     
     
-    public EntradaTabelaDeSimbolos(String lexema, String tipo, Categoria categoria) {
+    public EntradaTabelaDeSimbolos(String lexema, String tipo) {
         this.lexema = lexema;
         this.tipo = tipo;
-        this.categoria = categoria;
     }
 
      public String getNome() {
@@ -20,8 +17,7 @@ public class EntradaTabelaDeSimbolos {
     public String getTipo() {
         return tipo;
     }
-      
-    
+   
     @Override
     public int hashCode() {
         int hash = 7;
@@ -29,23 +25,6 @@ public class EntradaTabelaDeSimbolos {
         hash = 89 * hash + (this.tipo != null ? this.tipo.hashCode() : 0);
         return hash;
     }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
-    public TabelaDeSimbolos getSubTabela() {
-        return subTabela;
-    }
-    
-    public void setSubTabela(TabelaDeSimbolos subTabela) {
-        this.subTabela = subTabela;
-    }
-
 
     @Override
     public boolean equals(Object obj) {

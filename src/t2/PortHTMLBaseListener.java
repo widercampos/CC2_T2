@@ -1,4 +1,4 @@
-// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
+// Generated from PortHTML.g4 by ANTLR 4.5.1
 package t2;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -59,6 +59,18 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTags(PortHTMLParser.TagsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDefinir(PortHTMLParser.DefinirContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDefinir(PortHTMLParser.DefinirContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -172,25 +184,13 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCor_fundo(PortHTMLParser.Cor_fundoContext ctx) { }
+	@Override public void enterCor(PortHTMLParser.CorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCor_fundo(PortHTMLParser.Cor_fundoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterCor_texto(PortHTMLParser.Cor_textoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCor_texto(PortHTMLParser.Cor_textoContext ctx) { }
+	@Override public void exitCor(PortHTMLParser.CorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -9,15 +9,18 @@ cabecalho
 ;
 
 corpo
-: 'corpo' cor_fundo? tags* 'fim-corpo'
+: 'corpo' cor? tags* 'fim-corpo'
 ;
 
 tags
 : link | texto | titulo | subtitulo |
-  cor_fundo |imagem | mapa
- | botao | slide_show | div | container | menu_fixo
+  cor |imagem | mapa
+ | botao | slide_show | div | container | menu_fixo | definir
 ;
 
+definir:
+  'definir' IDENT 'como' CADEIA
+;
 
 menu_fixo
 : 'menu-fixo'  link+ 'fim-fixo'
@@ -34,13 +37,15 @@ container
 link
 : 'link' url nome_pagina 'fim-link'
 ;
+
 /*
 paragrafo
 : 'paragrafo' texto* 'fim-paragrafo'
 ;
 */
+
 texto
-:  'texto' estado? CADEIA 'fim-texto'
+:  'texto' estado? cor? CADEIA 'fim-texto'
 ;
 
 botao
@@ -59,12 +64,8 @@ subtitulo
 : 'subtitulo' CADEIA 'fim-subtitulo'
 ;
 
-cor_fundo
-:  nome_cor 
-;
-
-cor_texto
- : 'cor-texto' nome_cor 'fim-cor-texto'
+cor
+:  IDENT | nome_cor 
 ;
 
 imagem
@@ -114,6 +115,7 @@ nome_pagina
 url
 : CADEIA
 ;
+
 nome_cor
 : 'azul' | 'vermelho' | 'branco' | 'preto' | 'verde' |
   'amarelo' | 'rosa' | 'cinza' 
@@ -129,10 +131,13 @@ CADEIA
     ;
 
 /*
-CADEIA:  ( 'a'..'z' | 'A' .. 'Z' | '_' | '+' | '-' | '*' | '!' | '?' | '&' | '@' | '/')+
+CADEIA:  ( 'a'..'z' | 'A'..'Z' | '_' | '+' | '-' | '*' | '!' | '?' | '&' | '@' | '/' |)+
       ;
 */
       
+IDENT: ('A'..'Z' | 'a'..'z' | '0'..'9' | '-' | '_')+
+;
+
 INT: ('0'..'9')+
    ;
 

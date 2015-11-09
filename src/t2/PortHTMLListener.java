@@ -1,4 +1,4 @@
-// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
+// Generated from PortHTML.g4 by ANTLR 4.5.1
 package t2;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -47,6 +47,16 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTags(PortHTMLParser.TagsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#definir}.
+	 * @param ctx the parse tree
+	 */
+	void enterDefinir(PortHTMLParser.DefinirContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#definir}.
+	 * @param ctx the parse tree
+	 */
+	void exitDefinir(PortHTMLParser.DefinirContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#menu_fixo}.
 	 * @param ctx the parse tree
@@ -138,25 +148,15 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitSubtitulo(PortHTMLParser.SubtituloContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#cor_fundo}.
+	 * Enter a parse tree produced by {@link PortHTMLParser#cor}.
 	 * @param ctx the parse tree
 	 */
-	void enterCor_fundo(PortHTMLParser.Cor_fundoContext ctx);
+	void enterCor(PortHTMLParser.CorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#cor_fundo}.
+	 * Exit a parse tree produced by {@link PortHTMLParser#cor}.
 	 * @param ctx the parse tree
 	 */
-	void exitCor_fundo(PortHTMLParser.Cor_fundoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#cor_texto}.
-	 * @param ctx the parse tree
-	 */
-	void enterCor_texto(PortHTMLParser.Cor_textoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#cor_texto}.
-	 * @param ctx the parse tree
-	 */
-	void exitCor_texto(PortHTMLParser.Cor_textoContext ctx);
+	void exitCor(PortHTMLParser.CorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#imagem}.
 	 * @param ctx the parse tree

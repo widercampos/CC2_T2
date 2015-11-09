@@ -5,41 +5,31 @@ import java.util.List;
 
 public class TabelaDeSimbolos {
 
-    private String escopo;
-    private List<EntradaTabelaDeSimbolos> simbolos;
+        private List<EntradaTabelaDeSimbolos> simbolos;
 
-    public TabelaDeSimbolos(String escopo) {
+    public TabelaDeSimbolos() {
         simbolos = new ArrayList<EntradaTabelaDeSimbolos>();
-        this.escopo = escopo;
     }
 
-    public void adicionarSimbolo(String nome, String tipo, Categoria categoria) {
-        simbolos.add(new EntradaTabelaDeSimbolos(nome, tipo, categoria));
+    public void adicionarSimbolo(String nome, String tipo) {
+        simbolos.add(new EntradaTabelaDeSimbolos(nome, tipo));
     }
 
-    public void adicionarSimbolos(List<String> nomes, String tipo, Categoria categoria) {
+    public void adicionarSimbolos(List<String> nomes, String tipo) {
         for (String s : nomes) {
-            simbolos.add(new EntradaTabelaDeSimbolos(s, tipo, categoria));
+            simbolos.add(new EntradaTabelaDeSimbolos(s, tipo));
         }
     }
 
-    public boolean existeSimbolo(String nome, Categoria categoria) {
+    public boolean existeSimbolo(String nome) {
         for (EntradaTabelaDeSimbolos etds : simbolos) {
-            if (etds.getNome().equals(nome) && etds.getCategoria() == categoria) {
+            if (etds.getNome().equals(nome)) {
                 return true;
             }
         }
         return false;
     }
-    
-    public void setSubtabelaEtds (String nome, TabelaDeSimbolos subTabela){
-        for (EntradaTabelaDeSimbolos etds : simbolos) {
-            if (etds.getNome().equals(nome)) {
-                etds.setSubTabela(subTabela);
-            }
-        }
-    }
-    
+
     public EntradaTabelaDeSimbolos buscaSimbolo (String nome){
         for (EntradaTabelaDeSimbolos etds : simbolos){
             if (etds.getNome().equals(nome)){
@@ -50,21 +40,13 @@ public class TabelaDeSimbolos {
         return null;
     }
     
-    public String buscaTipoVariavel(String nome, Categoria categoria) {
+    public String buscaTipoVariavel(String nome) {
         for (EntradaTabelaDeSimbolos etds : simbolos) {
-            if (etds.getNome().equals(nome) && etds.getCategoria() == categoria) {
+            if (etds.getNome().equals(nome)) {
                 return etds.getTipo();
             }
         }
         return null;
     }
 
-    @Override
-    public String toString() {
-        String ret = "Escopo: " + escopo;
-        for (EntradaTabelaDeSimbolos etds : simbolos) {
-            ret += "\n   " + etds;
-        }
-        return ret;
-    }
 }
