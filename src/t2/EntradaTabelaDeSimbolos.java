@@ -3,11 +3,17 @@ package t2;
 public class EntradaTabelaDeSimbolos {
     private String lexema;
     private String tipo;
+    private String valor;
+
+    public String getValor() {
+        return valor;
+    }
     
     
-    public EntradaTabelaDeSimbolos(String lexema, String tipo) {
+    public EntradaTabelaDeSimbolos(String lexema, String tipo, String valor) {
         this.lexema = lexema;
         this.tipo = tipo;
+        this.valor = valor;
     }
 
      public String getNome() {

@@ -184,13 +184,13 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCor(PortHTMLParser.CorContext ctx) { }
+	@Override public void enterCor_fundo(PortHTMLParser.Cor_fundoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCor(PortHTMLParser.CorContext ctx) { }
+	@Override public void exitCor_fundo(PortHTMLParser.Cor_fundoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

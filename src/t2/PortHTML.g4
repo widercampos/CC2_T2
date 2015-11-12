@@ -9,12 +9,11 @@ cabecalho
 ;
 
 corpo
-: 'corpo' cor? tags* 'fim-corpo'
+: 'corpo' cor_fundo? tags* 'fim-corpo'
 ;
 
 tags
-: link | texto | titulo | subtitulo |
-  cor |imagem | mapa
+: link | texto | titulo | subtitulo | imagem | mapa
  | botao | slide_show | div | container | menu_fixo | definir
 ;
 
@@ -45,7 +44,7 @@ paragrafo
 */
 
 texto
-:  'texto' estado? cor? CADEIA 'fim-texto'
+:  'texto' estado? CADEIA 'fim-texto'
 ;
 
 botao
@@ -64,8 +63,8 @@ subtitulo
 : 'subtitulo' CADEIA 'fim-subtitulo'
 ;
 
-cor
-:  IDENT | nome_cor 
+cor_fundo
+: nome_cor
 ;
 
 imagem
@@ -113,7 +112,7 @@ nome_pagina
 ;
 
 url
-: CADEIA
+: CADEIA | IDENT
 ;
 
 nome_cor

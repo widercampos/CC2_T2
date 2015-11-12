@@ -148,15 +148,15 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitSubtitulo(PortHTMLParser.SubtituloContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#cor}.
+	 * Enter a parse tree produced by {@link PortHTMLParser#cor_fundo}.
 	 * @param ctx the parse tree
 	 */
-	void enterCor(PortHTMLParser.CorContext ctx);
+	void enterCor_fundo(PortHTMLParser.Cor_fundoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#cor}.
+	 * Exit a parse tree produced by {@link PortHTMLParser#cor_fundo}.
 	 * @param ctx the parse tree
 	 */
-	void exitCor(PortHTMLParser.CorContext ctx);
+	void exitCor_fundo(PortHTMLParser.Cor_fundoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#imagem}.
 	 * @param ctx the parse tree

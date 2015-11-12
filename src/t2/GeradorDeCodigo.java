@@ -21,7 +21,7 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
 
     public String TiraAspas(String codigo) {
         aux = "";
-        aux = codigo.replace("\"", " ");
+        aux = codigo.replace("\"", "");
         return aux;
     }
 
@@ -60,22 +60,17 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
     public void enterDefinir(PortHTMLParser.DefinirContext ctx) {
         String nomeVar = ctx.IDENT().getSymbol().getText();
         if (tabela.existeSimbolo(nomeVar)) {
-            // ERRO. como proceder? não pode imprimir no arquivo. tem que lançar?
+            // ERRO: já existe. como proceder? não pode imprimir no arquivo. tem que lançar exceção?
         } else /* ok, símbolo não declarado */ {
             // não precisa de tipo. por enquanto...
-            tabela.adicionarSimbolo(nomeVar, "");
+            tabela.adicionarSimbolo(nomeVar, "", TiraAspas(ctx.CADEIA().getText()));
         }
     }
 
     @Override
     public void enterCorpo(PortHTMLParser.CorpoContext ctx) {
-        if (ctx.cor() != null) {
-            if (ctx.cor().nome_cor() != null) {
-                out.printCodigo("<BODY Bgcolor=" + "\"" + MudaCor(ctx.cor().getText()) + "\">" + "\n");
-            } else /* é uma cor personalizada */ {
-                /* assumindo que o usuário tá usando uma varíavel que armazenou o hex de uma cor */
-                out.printCodigo("<BODY Bgcolor=" + "\"" + ctx.cor().IDENT().getSymbol().getText() + "\">" + "\n");
-            }
+        if (ctx.cor_fundo() != null) {
+            out.printCodigo("<BODY Bgcolor=" + "\"" + MudaCor(ctx.cor_fundo().getText()) + "\">" + "\n");
         } else {
             out.printCodigo("<BODY>" + "\n");
         }
@@ -181,7 +176,13 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
         //<a href="Sobre.html"  > Sobre o Trabalho </a>
         out.printCodigo("\n");
         out.printCodigo("<a href=\"");
-        out.printCodigo(TiraAspas(ctx.url().CADEIA().toString()) + "\"  " + "> ");
+        if (ctx.url().CADEIA() != null) {
+            /* é uma cadeia simples*/
+            out.printCodigo(TiraAspas(ctx.url().CADEIA().toString()) + "\"> ");
+        } else /* é uma variável armazenando o link */ {
+            String var = ctx.url().IDENT().getText();
+            out.printCodigo(tabela.buscaValor(var) + "\"> ");
+        }
         out.printCodigo(TiraAspas(ctx.nome_pagina().CADEIA().toString()));
         out.printCodigo(" </a>");
         out.printCodigo("<br>");
