@@ -14,7 +14,16 @@ corpo
 
 tags
 : link | texto | titulo | subtitulo | imagem | mapa
- | botao | slide_show | div | container | menu_fixo | definir
+ | botao | slide_show | menu_fixo | definir | linha
+;
+
+
+linha
+: 'linha'  (coluna tags*)+ 'fim-linha'
+;
+
+coluna
+: SPAN ESP?
 ;
 
 definir:
@@ -44,7 +53,7 @@ paragrafo
 */
 
 texto
-:  'texto' estado? CADEIA 'fim-texto'
+:  'texto' estado? CADEIA 'fim-texto' | 'texto' estado? IDENT 'fim-texto'
 ;
 
 botao
@@ -96,7 +105,7 @@ cidade
 ;
 
 coordenadas
-        : LATITUDE LONGITUDE
+        : latitude longitude
         ;
 
 slide_show
@@ -133,19 +142,34 @@ CADEIA
 CADEIA:  ( 'a'..'z' | 'A'..'Z' | '_' | '+' | '-' | '*' | '!' | '?' | '&' | '@' | '/' |)+
       ;
 */
+
+
+ESP
+: 'offset1' | 'offset2' | 'offset3' | 'offset4' | 'offset5' | 'offset6' | 'offset7'| 'offset8' |
+  'offset9' | 'offset10' | 'offset11' | 'offset12'
+;
+
+SPAN
+: 'span1' | 'span2' | 'span3' | 'span4' | 'span5' | 'span6' | 'span7' | 'span8' |
+  'span9' | 'span10' | 'span11' | 'span12' 
+;
+
+
       
-IDENT: ('A'..'Z' | 'a'..'z' | '0'..'9' | '-' | '_')+
+IDENT: ('A'..'Z' | 'a'..'z') ('A'..'Z' | 'a'..'z' | '0'..'9' | '-' | '_')*
 ;
 
 INT: ('0'..'9')+
    ;
 
-LATITUDE
-: ('+'|'-')('0'..'9')?('0'..'9')+'.'
-  ('0'..'9')('0'..'9')('0'..'9')('0'..'9')
-  ;
+latitude
+: COORDENADA
+;
 
-LONGITUDE
+longitude
+: COORDENADA
+;
+COORDENADA
 : ('+'|'-')('0'..'9')?('0'..'9')+'.'
   ('0'..'9')('0'..'9')('0'..'9')('0'..'9')
   ;

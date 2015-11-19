@@ -1,0 +1,12 @@
+site
+	cabecalho
+	"Declaração de Variavel"
+	fim-cabecalho
+
+	corpo
+		definir variavel como "http://www.globo.com/"
+                
+		link variavel "clique aqui" fim-link
+	fim-corpo
+
+fim-site

@@ -64,6 +64,30 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLinha(PortHTMLParser.LinhaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLinha(PortHTMLParser.LinhaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterColuna(PortHTMLParser.ColunaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitColuna(PortHTMLParser.ColunaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterDefinir(PortHTMLParser.DefinirContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -347,6 +371,30 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNome_cor(PortHTMLParser.Nome_corContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLatitude(PortHTMLParser.LatitudeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLatitude(PortHTMLParser.LatitudeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLongitude(PortHTMLParser.LongitudeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLongitude(PortHTMLParser.LongitudeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

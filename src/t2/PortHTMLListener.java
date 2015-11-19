@@ -48,6 +48,26 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitTags(PortHTMLParser.TagsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#linha}.
+	 * @param ctx the parse tree
+	 */
+	void enterLinha(PortHTMLParser.LinhaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#linha}.
+	 * @param ctx the parse tree
+	 */
+	void exitLinha(PortHTMLParser.LinhaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#coluna}.
+	 * @param ctx the parse tree
+	 */
+	void enterColuna(PortHTMLParser.ColunaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#coluna}.
+	 * @param ctx the parse tree
+	 */
+	void exitColuna(PortHTMLParser.ColunaContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#definir}.
 	 * @param ctx the parse tree
 	 */
@@ -287,4 +307,24 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNome_cor(PortHTMLParser.Nome_corContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#latitude}.
+	 * @param ctx the parse tree
+	 */
+	void enterLatitude(PortHTMLParser.LatitudeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#latitude}.
+	 * @param ctx the parse tree
+	 */
+	void exitLatitude(PortHTMLParser.LatitudeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#longitude}.
+	 * @param ctx the parse tree
+	 */
+	void enterLongitude(PortHTMLParser.LongitudeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#longitude}.
+	 * @param ctx the parse tree
+	 */
+	void exitLongitude(PortHTMLParser.LongitudeContext ctx);
 }

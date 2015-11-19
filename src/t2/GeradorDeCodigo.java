@@ -166,8 +166,11 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
         } else {
             out.printCodigo("\">");
         }
-
-        out.printCodigo(TiraAspas(ctx.CADEIA().toString()));
+        if (ctx.CADEIA() != null) {
+            out.printCodigo(TiraAspas(ctx.CADEIA().toString()));
+        } else /* é uma variável, ctx.IDENT() != null */ {
+            out.printCodigo(tabela.buscaValor(ctx.IDENT().getText()));
+        }
         out.printCodigo("</p></br>");
     }
 
@@ -205,7 +208,14 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
     @Override
     public void enterImagem(PortHTMLParser.ImagemContext ctx) {
         out.printCodigo("\n");
-        out.printCodigo("<img src=" + ctx.url().getText());
+        out.printCodigo("<img src=");
+        if (ctx.url().CADEIA() != null) {
+            /* é uma cadeia simples*/
+            out.printCodigo((ctx.url().CADEIA().toString()));
+        } else /* é uma variável armazenando o link */ {
+            String var = ctx.url().IDENT().getText();
+            out.printCodigo("\"" + tabela.buscaValor(var) + "\"");
+        }
         out.printCodigo(" height=\"" + ctx.dimensoes().altura().getText() + "\"");
         out.printCodigo(" width=\"" + ctx.dimensoes().largura().getText() + "\"");
         out.printCodigo(">");
@@ -229,7 +239,7 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
                 + "var map;\n"
                 + "function initMap() {\n"
                 + "  map = new google.maps.Map(document.getElementById('map'), {\n"
-                + "    center: {lat:" + ctx.coordenadas().LATITUDE() + ", lng:" + ctx.coordenadas().LONGITUDE() + "},\n"
+                + "    center: {lat:" + ctx.coordenadas().latitude().COORDENADA() + ", lng:" + ctx.coordenadas().longitude().COORDENADA() + "},\n"
                 + "    zoom: 8\n"
                 + "  });\n"
                 + "}\n"
@@ -238,6 +248,30 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
                 + "    <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDdUWK9joLAF3RC-_DbZLr6A-IXhXOk4So&callback=initMap\"\n"
                 + "        async defer></script>");
 
+    }
+
+    @Override
+    public void enterLinha(PortHTMLParser.LinhaContext ctx) {
+
+        out.printCodigo("\n");
+        out.printCodigo("<div class=\"row-fluid\"> \n");
+        out.printCodigo("<div class=\"");
+
+        for (PortHTMLParser.ColunaContext colCtx : ctx.coluna()) {
+            out.printCodigo(colCtx.SPAN().getText());
+            out.printCodigo(" ");
+            if (colCtx.ESP() != null) {
+                out.printCodigo(colCtx.ESP().getText());
+                out.printCodigo(" ");
+            }
+            out.printCodigo("\">");
+        }
+
+    }
+
+    @Override
+    public void exitLinha(PortHTMLParser.LinhaContext ctx) {
+        out.printCodigo("</div>");
     }
 
 }
