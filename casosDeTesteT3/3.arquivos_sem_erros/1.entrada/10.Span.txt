@@ -1,0 +1,23 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo 
+
+linha
+ coluna 
+     span4 
+           imagem  "img\imagem.jpg" dimensoes 200 300 fim-dimensoes  fim-imagem	
+           texto aviso "sadhsaiuhduishdiusahdiuhsaduiahsi"   fim-texto 
+ fim-coluna
+ coluna  
+     span4 offset2
+           imagem  "img\imagem.jpg" dimensoes 200 300 fim-dimensoes  fim-imagem	
+           texto aviso "sadhsaiuhduishdiusahdiuhsaduiahsi"   fim-texto 
+ fim-coluna         
+fim-linha
+
+
+
+fim-corpo
+fim-site

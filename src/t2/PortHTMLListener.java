@@ -1,4 +1,4 @@
-// Generated from PortHTML.g4 by ANTLR 4.5.1
+// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
 package t2;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -48,6 +48,26 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitTags(PortHTMLParser.TagsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#menu_fixo}.
+	 * @param ctx the parse tree
+	 */
+	void enterMenu_fixo(PortHTMLParser.Menu_fixoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#menu_fixo}.
+	 * @param ctx the parse tree
+	 */
+	void exitMenu_fixo(PortHTMLParser.Menu_fixoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#nome_link}.
+	 * @param ctx the parse tree
+	 */
+	void enterNome_link(PortHTMLParser.Nome_linkContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#nome_link}.
+	 * @param ctx the parse tree
+	 */
+	void exitNome_link(PortHTMLParser.Nome_linkContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#linha}.
 	 * @param ctx the parse tree
 	 */
@@ -57,6 +77,16 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLinha(PortHTMLParser.LinhaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#coluna_tags}.
+	 * @param ctx the parse tree
+	 */
+	void enterColuna_tags(PortHTMLParser.Coluna_tagsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#coluna_tags}.
+	 * @param ctx the parse tree
+	 */
+	void exitColuna_tags(PortHTMLParser.Coluna_tagsContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#coluna}.
 	 * @param ctx the parse tree
@@ -77,26 +107,6 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDefinir(PortHTMLParser.DefinirContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#menu_fixo}.
-	 * @param ctx the parse tree
-	 */
-	void enterMenu_fixo(PortHTMLParser.Menu_fixoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#menu_fixo}.
-	 * @param ctx the parse tree
-	 */
-	void exitMenu_fixo(PortHTMLParser.Menu_fixoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#div}.
-	 * @param ctx the parse tree
-	 */
-	void enterDiv(PortHTMLParser.DivContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#div}.
-	 * @param ctx the parse tree
-	 */
-	void exitDiv(PortHTMLParser.DivContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#container}.
 	 * @param ctx the parse tree

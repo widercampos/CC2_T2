@@ -13,43 +13,22 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 public class TestaAnalisadorSintatico {
 
     public static void main(String args[]) throws IOException, RecognitionException {
-        // SaidaParser out = new SaidaParser();
-// Descomente as linhas abaixo para testar o analisador gerado.
-// Obs: a linha abaixo está configurada para usar como entrada o arquivo lua1.txt
-// Modifique-a para testar os demais exemplos
         Saida o = new Saida();
-        //ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(args[0]));
-        //
         ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(args[0]));
         PortHTMLLexer lexer = new PortHTMLLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         PortHTMLParser parser = new PortHTMLParser(tokens);
-        //parser.addErrorListener(new T2ErrorListener(out));
 
-        try {
-//          parser.site();
-            PortHTMLParser.SiteContext raiz = parser.site();
-//          AnalisadorSemantico as = new AnalisadorSemantico(out);
-            GeradorDeCodigo gdc = new GeradorDeCodigo(o);
-            ParseTreeWalker ptw = new ParseTreeWalker();
+//      parser.site();
+        PortHTMLParser.SiteContext raiz = parser.site();
+        AnalisadorSemantico as = new AnalisadorSemantico();
+        GeradorDeCodigo gdc = new GeradorDeCodigo(o);
+        ParseTreeWalker ptw = new ParseTreeWalker();
+        ptw.walk(as, raiz);
+        if (!as.temErro()) /* não teve erro no semântico, pode gerar */{
             ptw.walk(gdc, raiz);
-        } catch (ParseCancellationException pce) {
-//          if (pce.getMessage() != null) {
-//         }
         }
 
-        /* não sei q diabos é isso */
-//        if (!out.isModificado()) {
-//            out.println("Fim da analise. Sem erros sintaticos.");
-//            out.println("Tabela de simbolos:");
-//
-//            TabelaDeSimbolos.imprimirTabela(out);
-//            System.out.print(out);
-//        } else {
-//            out.println("Fim da analise. Com erros sintaticos.");
-//        }
-        // descomentar quando fizer o semântico:
-        // out.println("Fim da compilacao");
         PrintWriter pw = new PrintWriter(new File(args[1]));
         pw.print(o.getTextoCodigo());
         //pw.print(out.toString());

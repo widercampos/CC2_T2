@@ -14,6 +14,7 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
     private static Saida out;
     private static TabelaDeSimbolos tabela;
     String aux = ""; //Buffer para Strings
+    boolean primeiro = true;
 
     public GeradorDeCodigo() {
         tabela = new TabelaDeSimbolos();
@@ -58,13 +59,10 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
 
     @Override
     public void enterDefinir(PortHTMLParser.DefinirContext ctx) {
+        // já foi verificada a validade da declaração no analisador semântico
         String nomeVar = ctx.IDENT().getSymbol().getText();
-        if (tabela.existeSimbolo(nomeVar)) {
-            // ERRO: já existe. como proceder? não pode imprimir no arquivo. tem que lançar exceção?
-        } else /* ok, símbolo não declarado */ {
-            // não precisa de tipo. por enquanto...
-            tabela.adicionarSimbolo(nomeVar, "", TiraAspas(ctx.CADEIA().getText()));
-        }
+        tabela.adicionarSimbolo(nomeVar, "", TiraAspas(ctx.CADEIA().getText()));
+
     }
 
     @Override
@@ -188,7 +186,7 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
         }
         out.printCodigo(TiraAspas(ctx.nome_pagina().CADEIA().toString()));
         out.printCodigo(" </a>");
-        out.printCodigo("<br>");
+        //out.printCodigo("<br>");
     }
 
     @Override
@@ -252,26 +250,64 @@ public class GeradorDeCodigo extends PortHTMLBaseListener {
 
     @Override
     public void enterLinha(PortHTMLParser.LinhaContext ctx) {
-
         out.printCodigo("\n");
         out.printCodigo("<div class=\"row-fluid\"> \n");
-        out.printCodigo("<div class=\"");
-
-        for (PortHTMLParser.ColunaContext colCtx : ctx.coluna()) {
-            out.printCodigo(colCtx.SPAN().getText());
-            out.printCodigo(" ");
-            if (colCtx.ESP() != null) {
-                out.printCodigo(colCtx.ESP().getText());
-                out.printCodigo(" ");
-            }
-            out.printCodigo("\">");
-        }
 
     }
 
     @Override
+    public void enterColuna_tags(PortHTMLParser.Coluna_tagsContext ctx) {
+        out.printCodigo("<div class=\"");
+
+        out.printCodigo(ctx.coluna().SPAN().getText());
+        out.printCodigo(" ");
+        if (ctx.coluna().ESP() != null) {
+            out.printCodigo(ctx.coluna().ESP().getText());
+            out.printCodigo(" ");
+        }
+        out.printCodigo("\">");
+    }
+
+    @Override
+    public void exitColuna_tags(PortHTMLParser.Coluna_tagsContext ctx) {
+        out.printCodigo("</div>\n");
+    }
+
+    @Override
     public void exitLinha(PortHTMLParser.LinhaContext ctx) {
-        out.printCodigo("</div>");
+        out.printCodigo("</div>\n");
+    }
+
+    @Override
+    public void enterMenu_fixo(PortHTMLParser.Menu_fixoContext ctx) {
+        out.printCodigo("<div class=\"navbar navbar-fixed-top\">\n"
+                + "          <div class=\"navbar\">\n"
+                + "      <div class=\"navbar-inner\">");
+        out.printCodigo("<a class=\"brand\" href=\"#\">   </a> \n");
+        out.printCodigo("<ul class=\"nav\">\n");
+    }
+
+    @Override
+    public void enterNome_link(PortHTMLParser.Nome_linkContext ctx) {
+        if (primeiro) {
+            primeiro = false;
+            out.printCodigo("<li class=\"active\">\n");
+        } else {
+            out.printCodigo("<li>\n");
+        }
+    }
+
+    @Override
+    public void exitNome_link(PortHTMLParser.Nome_linkContext ctx) {
+        out.printCodigo("</li>\n");
+    }
+
+    @Override
+    public void exitMenu_fixo(PortHTMLParser.Menu_fixoContext ctx) {
+        out.printCodigo(" </ul>\n"
+                + "      </div>\n"
+                + "    </div>\n"
+                + "    </div><br><br><br>\n");
     }
 
 }

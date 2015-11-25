@@ -17,9 +17,20 @@ tags
  | botao | slide_show | menu_fixo | definir | linha
 ;
 
+menu_fixo
+: 'menu-fixo'  nome_link+ 'fim-fixo'
+;
+
+nome_link
+: link
+;
 
 linha
-: 'linha'  (coluna tags*)+ 'fim-linha'
+: 'linha' coluna_tags+ 'fim-linha'
+;
+
+coluna_tags
+: 'coluna' coluna tags* 'fim-coluna'
 ;
 
 coluna
@@ -30,13 +41,6 @@ definir:
   'definir' IDENT 'como' CADEIA
 ;
 
-menu_fixo
-: 'menu-fixo'  link+ 'fim-fixo'
-;
-
-div
- : 'div' container? tags* 'fim-div'
- ;
 
 container
 : 'container'
@@ -58,7 +62,7 @@ texto
 
 botao
   : 'botao' estado? CADEIA 'fim-botao'
-  ;
+;
   
 estado
 : 'aviso' | 'alerta' | 'sucesso' | 'erro'

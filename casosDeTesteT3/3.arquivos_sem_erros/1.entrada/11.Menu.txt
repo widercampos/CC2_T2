@@ -1,0 +1,34 @@
+site
+
+cabecalho  "Compiladores"  fim-cabecalho
+
+corpo 
+
+definir Home como "PortHTML.html"
+definir Pagina1 como "http://www.globo.com/"
+definir Pagina2 como "http://www.uol.com/"
+
+menu-fixo     
+          link Home "Home" fim-link
+          link Pagina1 "Globo" fim-link
+          link Pagina2 "Uol" fim-link
+fim-fixo
+
+
+linha
+ coluna 
+     span4 
+           imagem  "img\imagem.jpg" dimensoes 200 300 fim-dimensoes  fim-imagem	
+           texto aviso "sadhsaiuhduishdiusahdiuhsaduiahsi"   fim-texto 
+ fim-coluna
+ coluna  
+     span4 offset2
+           imagem  "img\imagem.jpg" dimensoes 200 300 fim-dimensoes  fim-imagem	
+           texto aviso "sadhsaiuhduishdiusahdiuhsaduiahsi"   fim-texto 
+ fim-coluna         
+fim-linha
+
+
+
+fim-corpo
+fim-site
