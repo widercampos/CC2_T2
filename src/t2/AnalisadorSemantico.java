@@ -113,6 +113,7 @@ public class AnalisadorSemantico extends PortHTMLBaseListener {
             }
             soma += span;
         }
+        
         if (soma > 12) {
             int linha = ctx.getStart().getLine();
             System.out.println("Linha " + linha + ": ERRO semântico: soma das colunas é maior que 12.");
