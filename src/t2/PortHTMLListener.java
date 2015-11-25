@@ -1,4 +1,4 @@
-// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
+// Generated from PortHTML.g4 by ANTLR 4.5.1
 package t2;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -178,6 +178,16 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitSubtitulo(PortHTMLParser.SubtituloContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#cor}.
+	 * @param ctx the parse tree
+	 */
+	void enterCor(PortHTMLParser.CorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#cor}.
+	 * @param ctx the parse tree
+	 */
+	void exitCor(PortHTMLParser.CorContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#cor_fundo}.
 	 * @param ctx the parse tree
 	 */
@@ -268,15 +278,35 @@ public interface PortHTMLListener extends ParseTreeListener {
 	 */
 	void exitCoordenadas(PortHTMLParser.CoordenadasContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PortHTMLParser#slide_show}.
+	 * Enter a parse tree produced by {@link PortHTMLParser#nome_slide}.
 	 * @param ctx the parse tree
 	 */
-	void enterSlide_show(PortHTMLParser.Slide_showContext ctx);
+	void enterNome_slide(PortHTMLParser.Nome_slideContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PortHTMLParser#slide_show}.
+	 * Exit a parse tree produced by {@link PortHTMLParser#nome_slide}.
 	 * @param ctx the parse tree
 	 */
-	void exitSlide_show(PortHTMLParser.Slide_showContext ctx);
+	void exitNome_slide(PortHTMLParser.Nome_slideContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#imagem_texto}.
+	 * @param ctx the parse tree
+	 */
+	void enterImagem_texto(PortHTMLParser.Imagem_textoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#imagem_texto}.
+	 * @param ctx the parse tree
+	 */
+	void exitImagem_texto(PortHTMLParser.Imagem_textoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PortHTMLParser#imagem_slide}.
+	 * @param ctx the parse tree
+	 */
+	void enterImagem_slide(PortHTMLParser.Imagem_slideContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortHTMLParser#imagem_slide}.
+	 * @param ctx the parse tree
+	 */
+	void exitImagem_slide(PortHTMLParser.Imagem_slideContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PortHTMLParser#titulo_site}.
 	 * @param ctx the parse tree

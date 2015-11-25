@@ -8,26 +8,26 @@ import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.atn.ATNConfigSet;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.misc.ParseCancellationException;
 
 public class T2ErrorListener implements ANTLRErrorListener {
-    SaidaParser sp;
+    private static boolean errou = false; // variável pra ver se teve erro sintático
     
-    public T2ErrorListener(SaidaParser sp) {
-        this.sp = sp;
+    public boolean temErro(){
+        /* método pra verificar se teve erro sintático */
+        return errou;
     }
-
+    
     @Override
     public void syntaxError(Recognizer<?, ?> rcgnzr, Object o, int i, int i1, String string, RecognitionException re) {
         Token t = (Token)o;
         String tkName = t.getText();
         if(tkName.equals("<EOF>")) 
         {tkName = "EOF";
-        sp.println("Linha " + i + ": erro sintatico proximo a " + tkName); }
+        System.out.println("Linha " + i + ": erro sintatico proximo a \"" + tkName + "\"."); }
         else{
-        sp.println("Linha " + i + ": erro sintatico proximo a " + tkName); }
+        System.out.println("Linha " + i + ": erro sintatico proximo a \"" + tkName + "\"."); }
         
-        throw new ParseCancellationException();
+        errou = true;
     }
 
     @Override

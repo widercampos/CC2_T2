@@ -1,4 +1,4 @@
-// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
+// Generated from PortHTML.g4 by ANTLR 4.5.1
 package t2;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -22,24 +22,25 @@ public class PortHTMLParser extends Parser {
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
-		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, T__43=44, T__44=45, 
-		COMENTARIO=46, CADEIA=47, ESP=48, SPAN=49, IDENT=50, INT=51, COORDENADA=52, 
-		WS=53;
+		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, COMENTARIO=44, CADEIA=45, 
+		ESP=46, SPAN=47, IDENT=48, INT=49, COORDENADA=50, WS=51;
 	public static final int
 		RULE_site = 0, RULE_cabecalho = 1, RULE_corpo = 2, RULE_tags = 3, RULE_menu_fixo = 4, 
 		RULE_nome_link = 5, RULE_linha = 6, RULE_coluna_tags = 7, RULE_coluna = 8, 
 		RULE_definir = 9, RULE_container = 10, RULE_link = 11, RULE_texto = 12, 
 		RULE_botao = 13, RULE_estado = 14, RULE_titulo = 15, RULE_subtitulo = 16, 
-		RULE_cor_fundo = 17, RULE_imagem = 18, RULE_dimensoes = 19, RULE_largura = 20, 
-		RULE_altura = 21, RULE_mapa = 22, RULE_pais = 23, RULE_cidade = 24, RULE_coordenadas = 25, 
-		RULE_slide_show = 26, RULE_titulo_site = 27, RULE_nome_pagina = 28, RULE_url = 29, 
-		RULE_nome_cor = 30, RULE_latitude = 31, RULE_longitude = 32;
+		RULE_cor = 17, RULE_cor_fundo = 18, RULE_imagem = 19, RULE_dimensoes = 20, 
+		RULE_largura = 21, RULE_altura = 22, RULE_mapa = 23, RULE_pais = 24, RULE_cidade = 25, 
+		RULE_coordenadas = 26, RULE_nome_slide = 27, RULE_imagem_texto = 28, RULE_imagem_slide = 29, 
+		RULE_titulo_site = 30, RULE_nome_pagina = 31, RULE_url = 32, RULE_nome_cor = 33, 
+		RULE_latitude = 34, RULE_longitude = 35;
 	public static final String[] ruleNames = {
 		"site", "cabecalho", "corpo", "tags", "menu_fixo", "nome_link", "linha", 
 		"coluna_tags", "coluna", "definir", "container", "link", "texto", "botao", 
-		"estado", "titulo", "subtitulo", "cor_fundo", "imagem", "dimensoes", "largura", 
-		"altura", "mapa", "pais", "cidade", "coordenadas", "slide_show", "titulo_site", 
-		"nome_pagina", "url", "nome_cor", "latitude", "longitude"
+		"estado", "titulo", "subtitulo", "cor", "cor_fundo", "imagem", "dimensoes", 
+		"largura", "altura", "mapa", "pais", "cidade", "coordenadas", "nome_slide", 
+		"imagem_texto", "imagem_slide", "titulo_site", "nome_pagina", "url", "nome_cor", 
+		"latitude", "longitude"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -49,16 +50,15 @@ public class PortHTMLParser extends Parser {
 		"'fim-link'", "'texto'", "'fim-texto'", "'botao'", "'fim-botao'", "'aviso'", 
 		"'alerta'", "'sucesso'", "'erro'", "'titulo'", "'fim-titulo'", "'subtitulo'", 
 		"'fim-subtitulo'", "'imagem'", "'fim-imagem'", "'dimensoes'", "'fim-dimensoes'", 
-		"'mapa'", "'fim-mapa'", "'slide-show'", "'fim-slide-show'", "'azul'", 
-		"'vermelho'", "'branco'", "'preto'", "'verde'", "'amarelo'", "'rosa'", 
-		"'cinza'"
+		"'mapa'", "'fim-mapa'", "'azul'", "'vermelho'", "'branco'", "'preto'", 
+		"'verde'", "'amarelo'", "'rosa'", "'cinza'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, "COMENTARIO", 
-		"CADEIA", "ESP", "SPAN", "IDENT", "INT", "COORDENADA", "WS"
+		null, null, null, null, null, null, null, null, "COMENTARIO", "CADEIA", 
+		"ESP", "SPAN", "IDENT", "INT", "COORDENADA", "WS"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -136,13 +136,13 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(66);
+			setState(72);
 			match(T__0);
-			setState(67);
+			setState(73);
 			cabecalho();
-			setState(68);
+			setState(74);
 			corpo();
-			setState(69);
+			setState(75);
 			match(T__1);
 			}
 		}
@@ -181,11 +181,11 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(71);
+			setState(77);
 			match(T__2);
-			setState(72);
+			setState(78);
 			titulo_site();
-			setState(73);
+			setState(79);
 			match(T__3);
 			}
 		}
@@ -231,32 +231,32 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(75);
+			setState(81);
 			match(T__4);
-			setState(77);
+			setState(83);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__37) | (1L << T__38) | (1L << T__39) | (1L << T__40) | (1L << T__41) | (1L << T__42) | (1L << T__43) | (1L << T__44))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__35) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39) | (1L << T__40) | (1L << T__41) | (1L << T__42))) != 0)) {
 				{
-				setState(76);
+				setState(82);
 				cor_fundo();
 				}
 			}
 
-			setState(82);
+			setState(88);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__6) | (1L << T__8) | (1L << T__12) | (1L << T__15) | (1L << T__17) | (1L << T__19) | (1L << T__25) | (1L << T__27) | (1L << T__29) | (1L << T__33) | (1L << T__35))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__6) | (1L << T__8) | (1L << T__12) | (1L << T__15) | (1L << T__17) | (1L << T__19) | (1L << T__25) | (1L << T__27) | (1L << T__29) | (1L << T__33))) != 0)) {
 				{
 				{
-				setState(79);
+				setState(85);
 				tags();
 				}
 				}
-				setState(84);
+				setState(90);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(85);
+			setState(91);
 			match(T__5);
 			}
 		}
@@ -293,9 +293,6 @@ public class PortHTMLParser extends Parser {
 		public BotaoContext botao() {
 			return getRuleContext(BotaoContext.class,0);
 		}
-		public Slide_showContext slide_show() {
-			return getRuleContext(Slide_showContext.class,0);
-		}
 		public Menu_fixoContext menu_fixo() {
 			return getRuleContext(Menu_fixoContext.class,0);
 		}
@@ -323,82 +320,75 @@ public class PortHTMLParser extends Parser {
 		TagsContext _localctx = new TagsContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_tags);
 		try {
-			setState(98);
+			setState(103);
 			switch (_input.LA(1)) {
 			case T__15:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(87);
+				setState(93);
 				link();
 				}
 				break;
 			case T__17:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(88);
+				setState(94);
 				texto();
 				}
 				break;
 			case T__25:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(89);
+				setState(95);
 				titulo();
 				}
 				break;
 			case T__27:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(90);
+				setState(96);
 				subtitulo();
 				}
 				break;
 			case T__29:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(91);
+				setState(97);
 				imagem();
 				}
 				break;
 			case T__33:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(92);
+				setState(98);
 				mapa();
 				}
 				break;
 			case T__19:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(93);
+				setState(99);
 				botao();
 				}
 				break;
-			case T__35:
+			case T__6:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(94);
-				slide_show();
-				}
-				break;
-			case T__6:
-				enterOuterAlt(_localctx, 9);
-				{
-				setState(95);
+				setState(100);
 				menu_fixo();
 				}
 				break;
 			case T__12:
-				enterOuterAlt(_localctx, 10);
+				enterOuterAlt(_localctx, 9);
 				{
-				setState(96);
+				setState(101);
 				definir();
 				}
 				break;
 			case T__8:
-				enterOuterAlt(_localctx, 11);
+				enterOuterAlt(_localctx, 10);
 				{
-				setState(97);
+				setState(102);
 				linha();
 				}
 				break;
@@ -445,23 +435,23 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(100);
+			setState(105);
 			match(T__6);
-			setState(102); 
+			setState(107); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(101);
+				setState(106);
 				nome_link();
 				}
 				}
-				setState(104); 
+				setState(109); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==T__15 );
-			setState(106);
+			setState(111);
 			match(T__7);
 			}
 		}
@@ -500,7 +490,7 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(108);
+			setState(113);
 			link();
 			}
 		}
@@ -543,23 +533,23 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(110);
+			setState(115);
 			match(T__8);
-			setState(112); 
+			setState(117); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(111);
+				setState(116);
 				coluna_tags();
 				}
 				}
-				setState(114); 
+				setState(119); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==T__10 );
-			setState(116);
+			setState(121);
 			match(T__9);
 			}
 		}
@@ -605,25 +595,25 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(118);
-			match(T__10);
-			setState(119);
-			coluna();
 			setState(123);
+			match(T__10);
+			setState(124);
+			coluna();
+			setState(128);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__6) | (1L << T__8) | (1L << T__12) | (1L << T__15) | (1L << T__17) | (1L << T__19) | (1L << T__25) | (1L << T__27) | (1L << T__29) | (1L << T__33) | (1L << T__35))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__6) | (1L << T__8) | (1L << T__12) | (1L << T__15) | (1L << T__17) | (1L << T__19) | (1L << T__25) | (1L << T__27) | (1L << T__29) | (1L << T__33))) != 0)) {
 				{
 				{
-				setState(120);
+				setState(125);
 				tags();
 				}
 				}
-				setState(125);
+				setState(130);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(126);
+			setState(131);
 			match(T__11);
 			}
 		}
@@ -662,13 +652,13 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(128);
+			setState(133);
 			match(SPAN);
-			setState(130);
+			setState(135);
 			_la = _input.LA(1);
 			if (_la==ESP) {
 				{
-				setState(129);
+				setState(134);
 				match(ESP);
 				}
 			}
@@ -709,13 +699,13 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(132);
+			setState(137);
 			match(T__12);
-			setState(133);
+			setState(138);
 			match(IDENT);
-			setState(134);
+			setState(139);
 			match(T__13);
-			setState(135);
+			setState(140);
 			match(CADEIA);
 			}
 		}
@@ -751,7 +741,7 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(137);
+			setState(142);
 			match(T__14);
 			}
 		}
@@ -793,13 +783,13 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(139);
+			setState(144);
 			match(T__15);
-			setState(140);
+			setState(145);
 			url();
-			setState(141);
+			setState(146);
 			nome_pagina();
-			setState(142);
+			setState(147);
 			match(T__16);
 			}
 		}
@@ -816,6 +806,9 @@ public class PortHTMLParser extends Parser {
 
 	public static class TextoContext extends ParserRuleContext {
 		public TerminalNode CADEIA() { return getToken(PortHTMLParser.CADEIA, 0); }
+		public CorContext cor() {
+			return getRuleContext(CorContext.class,0);
+		}
 		public EstadoContext estado() {
 			return getRuleContext(EstadoContext.class,0);
 		}
@@ -839,45 +832,63 @@ public class PortHTMLParser extends Parser {
 		enterRule(_localctx, 24, RULE_texto);
 		int _la;
 		try {
-			setState(156);
-			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
+			setState(167);
+			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(144);
+				setState(149);
 				match(T__17);
-				setState(146);
+				setState(151);
+				_la = _input.LA(1);
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__35) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39) | (1L << T__40) | (1L << T__41) | (1L << T__42) | (1L << IDENT))) != 0)) {
+					{
+					setState(150);
+					cor();
+					}
+				}
+
+				setState(154);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__21) | (1L << T__22) | (1L << T__23) | (1L << T__24))) != 0)) {
 					{
-					setState(145);
+					setState(153);
 					estado();
 					}
 				}
 
-				setState(148);
+				setState(156);
 				match(CADEIA);
-				setState(149);
+				setState(157);
 				match(T__18);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(150);
+				setState(158);
 				match(T__17);
-				setState(152);
+				setState(160);
+				switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
+				case 1:
+					{
+					setState(159);
+					cor();
+					}
+					break;
+				}
+				setState(163);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__21) | (1L << T__22) | (1L << T__23) | (1L << T__24))) != 0)) {
 					{
-					setState(151);
+					setState(162);
 					estado();
 					}
 				}
 
-				setState(154);
+				setState(165);
 				match(IDENT);
-				setState(155);
+				setState(166);
 				match(T__18);
 				}
 				break;
@@ -920,20 +931,20 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(158);
+			setState(169);
 			match(T__19);
-			setState(160);
+			setState(171);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__21) | (1L << T__22) | (1L << T__23) | (1L << T__24))) != 0)) {
 				{
-				setState(159);
+				setState(170);
 				estado();
 				}
 			}
 
-			setState(162);
+			setState(173);
 			match(CADEIA);
-			setState(163);
+			setState(174);
 			match(T__20);
 			}
 		}
@@ -970,7 +981,7 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(165);
+			setState(176);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__21) | (1L << T__22) | (1L << T__23) | (1L << T__24))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -1012,11 +1023,11 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(167);
+			setState(178);
 			match(T__25);
-			setState(168);
+			setState(179);
 			match(CADEIA);
-			setState(169);
+			setState(180);
 			match(T__26);
 			}
 		}
@@ -1053,12 +1064,73 @@ public class PortHTMLParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(171);
+			setState(182);
 			match(T__27);
-			setState(172);
+			setState(183);
 			match(CADEIA);
-			setState(173);
+			setState(184);
 			match(T__28);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class CorContext extends ParserRuleContext {
+		public Nome_corContext nome_cor() {
+			return getRuleContext(Nome_corContext.class,0);
+		}
+		public TerminalNode IDENT() { return getToken(PortHTMLParser.IDENT, 0); }
+		public CorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cor; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).enterCor(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).exitCor(this);
+		}
+	}
+
+	public final CorContext cor() throws RecognitionException {
+		CorContext _localctx = new CorContext(_ctx, getState());
+		enterRule(_localctx, 34, RULE_cor);
+		try {
+			setState(188);
+			switch (_input.LA(1)) {
+			case T__35:
+			case T__36:
+			case T__37:
+			case T__38:
+			case T__39:
+			case T__40:
+			case T__41:
+			case T__42:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(186);
+				nome_cor();
+				}
+				break;
+			case IDENT:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(187);
+				match(IDENT);
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1092,11 +1164,11 @@ public class PortHTMLParser extends Parser {
 
 	public final Cor_fundoContext cor_fundo() throws RecognitionException {
 		Cor_fundoContext _localctx = new Cor_fundoContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_cor_fundo);
+		enterRule(_localctx, 36, RULE_cor_fundo);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(175);
+			setState(190);
 			nome_cor();
 			}
 		}
@@ -1134,17 +1206,17 @@ public class PortHTMLParser extends Parser {
 
 	public final ImagemContext imagem() throws RecognitionException {
 		ImagemContext _localctx = new ImagemContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_imagem);
+		enterRule(_localctx, 38, RULE_imagem);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(177);
+			setState(192);
 			match(T__29);
-			setState(178);
+			setState(193);
 			url();
-			setState(179);
+			setState(194);
 			dimensoes();
-			setState(180);
+			setState(195);
 			match(T__30);
 			}
 		}
@@ -1182,17 +1254,17 @@ public class PortHTMLParser extends Parser {
 
 	public final DimensoesContext dimensoes() throws RecognitionException {
 		DimensoesContext _localctx = new DimensoesContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_dimensoes);
+		enterRule(_localctx, 40, RULE_dimensoes);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(182);
+			setState(197);
 			match(T__31);
-			setState(183);
+			setState(198);
 			largura();
-			setState(184);
+			setState(199);
 			altura();
-			setState(185);
+			setState(200);
 			match(T__32);
 			}
 		}
@@ -1225,11 +1297,11 @@ public class PortHTMLParser extends Parser {
 
 	public final LarguraContext largura() throws RecognitionException {
 		LarguraContext _localctx = new LarguraContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_largura);
+		enterRule(_localctx, 42, RULE_largura);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(187);
+			setState(202);
 			match(INT);
 			}
 		}
@@ -1262,11 +1334,11 @@ public class PortHTMLParser extends Parser {
 
 	public final AlturaContext altura() throws RecognitionException {
 		AlturaContext _localctx = new AlturaContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_altura);
+		enterRule(_localctx, 44, RULE_altura);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(189);
+			setState(204);
 			match(INT);
 			}
 		}
@@ -1301,15 +1373,15 @@ public class PortHTMLParser extends Parser {
 
 	public final MapaContext mapa() throws RecognitionException {
 		MapaContext _localctx = new MapaContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_mapa);
+		enterRule(_localctx, 46, RULE_mapa);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(191);
+			setState(206);
 			match(T__33);
-			setState(192);
+			setState(207);
 			coordenadas();
-			setState(193);
+			setState(208);
 			match(T__34);
 			}
 		}
@@ -1347,22 +1419,22 @@ public class PortHTMLParser extends Parser {
 
 	public final PaisContext pais() throws RecognitionException {
 		PaisContext _localctx = new PaisContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_pais);
+		enterRule(_localctx, 48, RULE_pais);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(196); 
+			setState(211); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(195);
+				setState(210);
 				texto();
 				}
 				}
-				setState(198); 
+				setState(213); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==T__17 );
@@ -1402,22 +1474,22 @@ public class PortHTMLParser extends Parser {
 
 	public final CidadeContext cidade() throws RecognitionException {
 		CidadeContext _localctx = new CidadeContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_cidade);
+		enterRule(_localctx, 50, RULE_cidade);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(201); 
+			setState(216); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(200);
+				setState(215);
 				texto();
 				}
 				}
-				setState(203); 
+				setState(218); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==T__17 );
@@ -1457,13 +1529,13 @@ public class PortHTMLParser extends Parser {
 
 	public final CoordenadasContext coordenadas() throws RecognitionException {
 		CoordenadasContext _localctx = new CoordenadasContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_coordenadas);
+		enterRule(_localctx, 52, RULE_coordenadas);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(205);
+			setState(220);
 			latitude();
-			setState(206);
+			setState(221);
 			longitude();
 			}
 		}
@@ -1478,67 +1550,117 @@ public class PortHTMLParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Slide_showContext extends ParserRuleContext {
-		public List<ImagemContext> imagem() {
-			return getRuleContexts(ImagemContext.class);
-		}
-		public ImagemContext imagem(int i) {
-			return getRuleContext(ImagemContext.class,i);
-		}
-		public List<TextoContext> texto() {
-			return getRuleContexts(TextoContext.class);
-		}
-		public TextoContext texto(int i) {
-			return getRuleContext(TextoContext.class,i);
-		}
-		public Slide_showContext(ParserRuleContext parent, int invokingState) {
+	public static class Nome_slideContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(PortHTMLParser.CADEIA, 0); }
+		public Nome_slideContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_slide_show; }
+		@Override public int getRuleIndex() { return RULE_nome_slide; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).enterSlide_show(this);
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).enterNome_slide(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).exitSlide_show(this);
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).exitNome_slide(this);
 		}
 	}
 
-	public final Slide_showContext slide_show() throws RecognitionException {
-		Slide_showContext _localctx = new Slide_showContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_slide_show);
+	public final Nome_slideContext nome_slide() throws RecognitionException {
+		Nome_slideContext _localctx = new Nome_slideContext(_ctx, getState());
+		enterRule(_localctx, 54, RULE_nome_slide);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(223);
+			match(CADEIA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Imagem_textoContext extends ParserRuleContext {
+		public Imagem_slideContext imagem_slide() {
+			return getRuleContext(Imagem_slideContext.class,0);
+		}
+		public TerminalNode CADEIA() { return getToken(PortHTMLParser.CADEIA, 0); }
+		public Imagem_textoContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_imagem_texto; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).enterImagem_texto(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).exitImagem_texto(this);
+		}
+	}
+
+	public final Imagem_textoContext imagem_texto() throws RecognitionException {
+		Imagem_textoContext _localctx = new Imagem_textoContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_imagem_texto);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(208);
-			match(T__35);
-			setState(213); 
-			_errHandler.sync(this);
+			setState(225);
+			imagem_slide();
+			setState(227);
 			_la = _input.LA(1);
-			do {
+			if (_la==CADEIA) {
 				{
-				{
-				setState(209);
-				imagem();
-				setState(211);
-				_la = _input.LA(1);
-				if (_la==T__17) {
-					{
-					setState(210);
-					texto();
-					}
+				setState(226);
+				match(CADEIA);
 				}
+			}
 
-				}
-				}
-				setState(215); 
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-			} while ( _la==T__29 );
-			setState(217);
-			match(T__36);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Imagem_slideContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(PortHTMLParser.CADEIA, 0); }
+		public Imagem_slideContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_imagem_slide; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).enterImagem_slide(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PortHTMLListener ) ((PortHTMLListener)listener).exitImagem_slide(this);
+		}
+	}
+
+	public final Imagem_slideContext imagem_slide() throws RecognitionException {
+		Imagem_slideContext _localctx = new Imagem_slideContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_imagem_slide);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(229);
+			match(CADEIA);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1570,11 +1692,11 @@ public class PortHTMLParser extends Parser {
 
 	public final Titulo_siteContext titulo_site() throws RecognitionException {
 		Titulo_siteContext _localctx = new Titulo_siteContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_titulo_site);
+		enterRule(_localctx, 60, RULE_titulo_site);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(219);
+			setState(231);
 			match(CADEIA);
 			}
 		}
@@ -1607,11 +1729,11 @@ public class PortHTMLParser extends Parser {
 
 	public final Nome_paginaContext nome_pagina() throws RecognitionException {
 		Nome_paginaContext _localctx = new Nome_paginaContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_nome_pagina);
+		enterRule(_localctx, 62, RULE_nome_pagina);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(221);
+			setState(233);
 			match(CADEIA);
 			}
 		}
@@ -1645,12 +1767,12 @@ public class PortHTMLParser extends Parser {
 
 	public final UrlContext url() throws RecognitionException {
 		UrlContext _localctx = new UrlContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_url);
+		enterRule(_localctx, 64, RULE_url);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(223);
+			setState(235);
 			_la = _input.LA(1);
 			if ( !(_la==CADEIA || _la==IDENT) ) {
 			_errHandler.recoverInline(this);
@@ -1687,14 +1809,14 @@ public class PortHTMLParser extends Parser {
 
 	public final Nome_corContext nome_cor() throws RecognitionException {
 		Nome_corContext _localctx = new Nome_corContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_nome_cor);
+		enterRule(_localctx, 66, RULE_nome_cor);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(225);
+			setState(237);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__37) | (1L << T__38) | (1L << T__39) | (1L << T__40) | (1L << T__41) | (1L << T__42) | (1L << T__43) | (1L << T__44))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__35) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39) | (1L << T__40) | (1L << T__41) | (1L << T__42))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			} else {
 				consume();
@@ -1730,11 +1852,11 @@ public class PortHTMLParser extends Parser {
 
 	public final LatitudeContext latitude() throws RecognitionException {
 		LatitudeContext _localctx = new LatitudeContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_latitude);
+		enterRule(_localctx, 68, RULE_latitude);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(227);
+			setState(239);
 			match(COORDENADA);
 			}
 		}
@@ -1767,11 +1889,11 @@ public class PortHTMLParser extends Parser {
 
 	public final LongitudeContext longitude() throws RecognitionException {
 		LongitudeContext _localctx = new LongitudeContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_longitude);
+		enterRule(_localctx, 70, RULE_longitude);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(229);
+			setState(241);
 			match(COORDENADA);
 			}
 		}
@@ -1787,76 +1909,80 @@ public class PortHTMLParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\67\u00ea\4\2\t\2"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\65\u00f6\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
 		"\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36\4\37\t\37\4 \t \4!"+
-		"\t!\4\"\t\"\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4\3\4\5\4P\n\4\3\4\7"+
-		"\4S\n\4\f\4\16\4V\13\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5"+
-		"\3\5\5\5e\n\5\3\6\3\6\6\6i\n\6\r\6\16\6j\3\6\3\6\3\7\3\7\3\b\3\b\6\bs"+
-		"\n\b\r\b\16\bt\3\b\3\b\3\t\3\t\3\t\7\t|\n\t\f\t\16\t\177\13\t\3\t\3\t"+
-		"\3\n\3\n\5\n\u0085\n\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3\r\3\r\3\r\3"+
-		"\r\3\r\3\16\3\16\5\16\u0095\n\16\3\16\3\16\3\16\3\16\5\16\u009b\n\16\3"+
-		"\16\3\16\5\16\u009f\n\16\3\17\3\17\5\17\u00a3\n\17\3\17\3\17\3\17\3\20"+
-		"\3\20\3\21\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\23\3\23\3\24\3\24\3\24"+
-		"\3\24\3\24\3\25\3\25\3\25\3\25\3\25\3\26\3\26\3\27\3\27\3\30\3\30\3\30"+
-		"\3\30\3\31\6\31\u00c7\n\31\r\31\16\31\u00c8\3\32\6\32\u00cc\n\32\r\32"+
-		"\16\32\u00cd\3\33\3\33\3\33\3\34\3\34\3\34\5\34\u00d6\n\34\6\34\u00d8"+
-		"\n\34\r\34\16\34\u00d9\3\34\3\34\3\35\3\35\3\36\3\36\3\37\3\37\3 \3 \3"+
-		"!\3!\3\"\3\"\3\"\2\2#\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,."+
-		"\60\62\64\668:<>@B\2\5\3\2\30\33\4\2\61\61\64\64\3\2(/\u00e0\2D\3\2\2"+
-		"\2\4I\3\2\2\2\6M\3\2\2\2\bd\3\2\2\2\nf\3\2\2\2\fn\3\2\2\2\16p\3\2\2\2"+
-		"\20x\3\2\2\2\22\u0082\3\2\2\2\24\u0086\3\2\2\2\26\u008b\3\2\2\2\30\u008d"+
-		"\3\2\2\2\32\u009e\3\2\2\2\34\u00a0\3\2\2\2\36\u00a7\3\2\2\2 \u00a9\3\2"+
-		"\2\2\"\u00ad\3\2\2\2$\u00b1\3\2\2\2&\u00b3\3\2\2\2(\u00b8\3\2\2\2*\u00bd"+
-		"\3\2\2\2,\u00bf\3\2\2\2.\u00c1\3\2\2\2\60\u00c6\3\2\2\2\62\u00cb\3\2\2"+
-		"\2\64\u00cf\3\2\2\2\66\u00d2\3\2\2\28\u00dd\3\2\2\2:\u00df\3\2\2\2<\u00e1"+
-		"\3\2\2\2>\u00e3\3\2\2\2@\u00e5\3\2\2\2B\u00e7\3\2\2\2DE\7\3\2\2EF\5\4"+
-		"\3\2FG\5\6\4\2GH\7\4\2\2H\3\3\2\2\2IJ\7\5\2\2JK\58\35\2KL\7\6\2\2L\5\3"+
-		"\2\2\2MO\7\7\2\2NP\5$\23\2ON\3\2\2\2OP\3\2\2\2PT\3\2\2\2QS\5\b\5\2RQ\3"+
-		"\2\2\2SV\3\2\2\2TR\3\2\2\2TU\3\2\2\2UW\3\2\2\2VT\3\2\2\2WX\7\b\2\2X\7"+
-		"\3\2\2\2Ye\5\30\r\2Ze\5\32\16\2[e\5 \21\2\\e\5\"\22\2]e\5&\24\2^e\5.\30"+
-		"\2_e\5\34\17\2`e\5\66\34\2ae\5\n\6\2be\5\24\13\2ce\5\16\b\2dY\3\2\2\2"+
-		"dZ\3\2\2\2d[\3\2\2\2d\\\3\2\2\2d]\3\2\2\2d^\3\2\2\2d_\3\2\2\2d`\3\2\2"+
-		"\2da\3\2\2\2db\3\2\2\2dc\3\2\2\2e\t\3\2\2\2fh\7\t\2\2gi\5\f\7\2hg\3\2"+
-		"\2\2ij\3\2\2\2jh\3\2\2\2jk\3\2\2\2kl\3\2\2\2lm\7\n\2\2m\13\3\2\2\2no\5"+
-		"\30\r\2o\r\3\2\2\2pr\7\13\2\2qs\5\20\t\2rq\3\2\2\2st\3\2\2\2tr\3\2\2\2"+
-		"tu\3\2\2\2uv\3\2\2\2vw\7\f\2\2w\17\3\2\2\2xy\7\r\2\2y}\5\22\n\2z|\5\b"+
-		"\5\2{z\3\2\2\2|\177\3\2\2\2}{\3\2\2\2}~\3\2\2\2~\u0080\3\2\2\2\177}\3"+
-		"\2\2\2\u0080\u0081\7\16\2\2\u0081\21\3\2\2\2\u0082\u0084\7\63\2\2\u0083"+
-		"\u0085\7\62\2\2\u0084\u0083\3\2\2\2\u0084\u0085\3\2\2\2\u0085\23\3\2\2"+
-		"\2\u0086\u0087\7\17\2\2\u0087\u0088\7\64\2\2\u0088\u0089\7\20\2\2\u0089"+
-		"\u008a\7\61\2\2\u008a\25\3\2\2\2\u008b\u008c\7\21\2\2\u008c\27\3\2\2\2"+
-		"\u008d\u008e\7\22\2\2\u008e\u008f\5<\37\2\u008f\u0090\5:\36\2\u0090\u0091"+
-		"\7\23\2\2\u0091\31\3\2\2\2\u0092\u0094\7\24\2\2\u0093\u0095\5\36\20\2"+
-		"\u0094\u0093\3\2\2\2\u0094\u0095\3\2\2\2\u0095\u0096\3\2\2\2\u0096\u0097"+
-		"\7\61\2\2\u0097\u009f\7\25\2\2\u0098\u009a\7\24\2\2\u0099\u009b\5\36\20"+
-		"\2\u009a\u0099\3\2\2\2\u009a\u009b\3\2\2\2\u009b\u009c\3\2\2\2\u009c\u009d"+
-		"\7\64\2\2\u009d\u009f\7\25\2\2\u009e\u0092\3\2\2\2\u009e\u0098\3\2\2\2"+
-		"\u009f\33\3\2\2\2\u00a0\u00a2\7\26\2\2\u00a1\u00a3\5\36\20\2\u00a2\u00a1"+
-		"\3\2\2\2\u00a2\u00a3\3\2\2\2\u00a3\u00a4\3\2\2\2\u00a4\u00a5\7\61\2\2"+
-		"\u00a5\u00a6\7\27\2\2\u00a6\35\3\2\2\2\u00a7\u00a8\t\2\2\2\u00a8\37\3"+
-		"\2\2\2\u00a9\u00aa\7\34\2\2\u00aa\u00ab\7\61\2\2\u00ab\u00ac\7\35\2\2"+
-		"\u00ac!\3\2\2\2\u00ad\u00ae\7\36\2\2\u00ae\u00af\7\61\2\2\u00af\u00b0"+
-		"\7\37\2\2\u00b0#\3\2\2\2\u00b1\u00b2\5> \2\u00b2%\3\2\2\2\u00b3\u00b4"+
-		"\7 \2\2\u00b4\u00b5\5<\37\2\u00b5\u00b6\5(\25\2\u00b6\u00b7\7!\2\2\u00b7"+
-		"\'\3\2\2\2\u00b8\u00b9\7\"\2\2\u00b9\u00ba\5*\26\2\u00ba\u00bb\5,\27\2"+
-		"\u00bb\u00bc\7#\2\2\u00bc)\3\2\2\2\u00bd\u00be\7\65\2\2\u00be+\3\2\2\2"+
-		"\u00bf\u00c0\7\65\2\2\u00c0-\3\2\2\2\u00c1\u00c2\7$\2\2\u00c2\u00c3\5"+
-		"\64\33\2\u00c3\u00c4\7%\2\2\u00c4/\3\2\2\2\u00c5\u00c7\5\32\16\2\u00c6"+
-		"\u00c5\3\2\2\2\u00c7\u00c8\3\2\2\2\u00c8\u00c6\3\2\2\2\u00c8\u00c9\3\2"+
-		"\2\2\u00c9\61\3\2\2\2\u00ca\u00cc\5\32\16\2\u00cb\u00ca\3\2\2\2\u00cc"+
-		"\u00cd\3\2\2\2\u00cd\u00cb\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce\63\3\2\2"+
-		"\2\u00cf\u00d0\5@!\2\u00d0\u00d1\5B\"\2\u00d1\65\3\2\2\2\u00d2\u00d7\7"+
-		"&\2\2\u00d3\u00d5\5&\24\2\u00d4\u00d6\5\32\16\2\u00d5\u00d4\3\2\2\2\u00d5"+
-		"\u00d6\3\2\2\2\u00d6\u00d8\3\2\2\2\u00d7\u00d3\3\2\2\2\u00d8\u00d9\3\2"+
-		"\2\2\u00d9\u00d7\3\2\2\2\u00d9\u00da\3\2\2\2\u00da\u00db\3\2\2\2\u00db"+
-		"\u00dc\7\'\2\2\u00dc\67\3\2\2\2\u00dd\u00de\7\61\2\2\u00de9\3\2\2\2\u00df"+
-		"\u00e0\7\61\2\2\u00e0;\3\2\2\2\u00e1\u00e2\t\3\2\2\u00e2=\3\2\2\2\u00e3"+
-		"\u00e4\t\4\2\2\u00e4?\3\2\2\2\u00e5\u00e6\7\66\2\2\u00e6A\3\2\2\2\u00e7"+
-		"\u00e8\7\66\2\2\u00e8C\3\2\2\2\21OTdjt}\u0084\u0094\u009a\u009e\u00a2"+
-		"\u00c8\u00cd\u00d5\u00d9";
+		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4"+
+		"\3\4\5\4V\n\4\3\4\7\4Y\n\4\f\4\16\4\\\13\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5"+
+		"\3\5\3\5\3\5\3\5\3\5\5\5j\n\5\3\6\3\6\6\6n\n\6\r\6\16\6o\3\6\3\6\3\7\3"+
+		"\7\3\b\3\b\6\bx\n\b\r\b\16\by\3\b\3\b\3\t\3\t\3\t\7\t\u0081\n\t\f\t\16"+
+		"\t\u0084\13\t\3\t\3\t\3\n\3\n\5\n\u008a\n\n\3\13\3\13\3\13\3\13\3\13\3"+
+		"\f\3\f\3\r\3\r\3\r\3\r\3\r\3\16\3\16\5\16\u009a\n\16\3\16\5\16\u009d\n"+
+		"\16\3\16\3\16\3\16\3\16\5\16\u00a3\n\16\3\16\5\16\u00a6\n\16\3\16\3\16"+
+		"\5\16\u00aa\n\16\3\17\3\17\5\17\u00ae\n\17\3\17\3\17\3\17\3\20\3\20\3"+
+		"\21\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\23\3\23\5\23\u00bf\n\23\3\24"+
+		"\3\24\3\25\3\25\3\25\3\25\3\25\3\26\3\26\3\26\3\26\3\26\3\27\3\27\3\30"+
+		"\3\30\3\31\3\31\3\31\3\31\3\32\6\32\u00d6\n\32\r\32\16\32\u00d7\3\33\6"+
+		"\33\u00db\n\33\r\33\16\33\u00dc\3\34\3\34\3\34\3\35\3\35\3\36\3\36\5\36"+
+		"\u00e6\n\36\3\37\3\37\3 \3 \3!\3!\3\"\3\"\3#\3#\3$\3$\3%\3%\3%\2\2&\2"+
+		"\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFH\2"+
+		"\5\3\2\30\33\4\2//\62\62\3\2&-\u00ea\2J\3\2\2\2\4O\3\2\2\2\6S\3\2\2\2"+
+		"\bi\3\2\2\2\nk\3\2\2\2\fs\3\2\2\2\16u\3\2\2\2\20}\3\2\2\2\22\u0087\3\2"+
+		"\2\2\24\u008b\3\2\2\2\26\u0090\3\2\2\2\30\u0092\3\2\2\2\32\u00a9\3\2\2"+
+		"\2\34\u00ab\3\2\2\2\36\u00b2\3\2\2\2 \u00b4\3\2\2\2\"\u00b8\3\2\2\2$\u00be"+
+		"\3\2\2\2&\u00c0\3\2\2\2(\u00c2\3\2\2\2*\u00c7\3\2\2\2,\u00cc\3\2\2\2."+
+		"\u00ce\3\2\2\2\60\u00d0\3\2\2\2\62\u00d5\3\2\2\2\64\u00da\3\2\2\2\66\u00de"+
+		"\3\2\2\28\u00e1\3\2\2\2:\u00e3\3\2\2\2<\u00e7\3\2\2\2>\u00e9\3\2\2\2@"+
+		"\u00eb\3\2\2\2B\u00ed\3\2\2\2D\u00ef\3\2\2\2F\u00f1\3\2\2\2H\u00f3\3\2"+
+		"\2\2JK\7\3\2\2KL\5\4\3\2LM\5\6\4\2MN\7\4\2\2N\3\3\2\2\2OP\7\5\2\2PQ\5"+
+		"> \2QR\7\6\2\2R\5\3\2\2\2SU\7\7\2\2TV\5&\24\2UT\3\2\2\2UV\3\2\2\2VZ\3"+
+		"\2\2\2WY\5\b\5\2XW\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2Z[\3\2\2\2[]\3\2\2\2\\"+
+		"Z\3\2\2\2]^\7\b\2\2^\7\3\2\2\2_j\5\30\r\2`j\5\32\16\2aj\5 \21\2bj\5\""+
+		"\22\2cj\5(\25\2dj\5\60\31\2ej\5\34\17\2fj\5\n\6\2gj\5\24\13\2hj\5\16\b"+
+		"\2i_\3\2\2\2i`\3\2\2\2ia\3\2\2\2ib\3\2\2\2ic\3\2\2\2id\3\2\2\2ie\3\2\2"+
+		"\2if\3\2\2\2ig\3\2\2\2ih\3\2\2\2j\t\3\2\2\2km\7\t\2\2ln\5\f\7\2ml\3\2"+
+		"\2\2no\3\2\2\2om\3\2\2\2op\3\2\2\2pq\3\2\2\2qr\7\n\2\2r\13\3\2\2\2st\5"+
+		"\30\r\2t\r\3\2\2\2uw\7\13\2\2vx\5\20\t\2wv\3\2\2\2xy\3\2\2\2yw\3\2\2\2"+
+		"yz\3\2\2\2z{\3\2\2\2{|\7\f\2\2|\17\3\2\2\2}~\7\r\2\2~\u0082\5\22\n\2\177"+
+		"\u0081\5\b\5\2\u0080\177\3\2\2\2\u0081\u0084\3\2\2\2\u0082\u0080\3\2\2"+
+		"\2\u0082\u0083\3\2\2\2\u0083\u0085\3\2\2\2\u0084\u0082\3\2\2\2\u0085\u0086"+
+		"\7\16\2\2\u0086\21\3\2\2\2\u0087\u0089\7\61\2\2\u0088\u008a\7\60\2\2\u0089"+
+		"\u0088\3\2\2\2\u0089\u008a\3\2\2\2\u008a\23\3\2\2\2\u008b\u008c\7\17\2"+
+		"\2\u008c\u008d\7\62\2\2\u008d\u008e\7\20\2\2\u008e\u008f\7/\2\2\u008f"+
+		"\25\3\2\2\2\u0090\u0091\7\21\2\2\u0091\27\3\2\2\2\u0092\u0093\7\22\2\2"+
+		"\u0093\u0094\5B\"\2\u0094\u0095\5@!\2\u0095\u0096\7\23\2\2\u0096\31\3"+
+		"\2\2\2\u0097\u0099\7\24\2\2\u0098\u009a\5$\23\2\u0099\u0098\3\2\2\2\u0099"+
+		"\u009a\3\2\2\2\u009a\u009c\3\2\2\2\u009b\u009d\5\36\20\2\u009c\u009b\3"+
+		"\2\2\2\u009c\u009d\3\2\2\2\u009d\u009e\3\2\2\2\u009e\u009f\7/\2\2\u009f"+
+		"\u00aa\7\25\2\2\u00a0\u00a2\7\24\2\2\u00a1\u00a3\5$\23\2\u00a2\u00a1\3"+
+		"\2\2\2\u00a2\u00a3\3\2\2\2\u00a3\u00a5\3\2\2\2\u00a4\u00a6\5\36\20\2\u00a5"+
+		"\u00a4\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\u00a8\7\62"+
+		"\2\2\u00a8\u00aa\7\25\2\2\u00a9\u0097\3\2\2\2\u00a9\u00a0\3\2\2\2\u00aa"+
+		"\33\3\2\2\2\u00ab\u00ad\7\26\2\2\u00ac\u00ae\5\36\20\2\u00ad\u00ac\3\2"+
+		"\2\2\u00ad\u00ae\3\2\2\2\u00ae\u00af\3\2\2\2\u00af\u00b0\7/\2\2\u00b0"+
+		"\u00b1\7\27\2\2\u00b1\35\3\2\2\2\u00b2\u00b3\t\2\2\2\u00b3\37\3\2\2\2"+
+		"\u00b4\u00b5\7\34\2\2\u00b5\u00b6\7/\2\2\u00b6\u00b7\7\35\2\2\u00b7!\3"+
+		"\2\2\2\u00b8\u00b9\7\36\2\2\u00b9\u00ba\7/\2\2\u00ba\u00bb\7\37\2\2\u00bb"+
+		"#\3\2\2\2\u00bc\u00bf\5D#\2\u00bd\u00bf\7\62\2\2\u00be\u00bc\3\2\2\2\u00be"+
+		"\u00bd\3\2\2\2\u00bf%\3\2\2\2\u00c0\u00c1\5D#\2\u00c1\'\3\2\2\2\u00c2"+
+		"\u00c3\7 \2\2\u00c3\u00c4\5B\"\2\u00c4\u00c5\5*\26\2\u00c5\u00c6\7!\2"+
+		"\2\u00c6)\3\2\2\2\u00c7\u00c8\7\"\2\2\u00c8\u00c9\5,\27\2\u00c9\u00ca"+
+		"\5.\30\2\u00ca\u00cb\7#\2\2\u00cb+\3\2\2\2\u00cc\u00cd\7\63\2\2\u00cd"+
+		"-\3\2\2\2\u00ce\u00cf\7\63\2\2\u00cf/\3\2\2\2\u00d0\u00d1\7$\2\2\u00d1"+
+		"\u00d2\5\66\34\2\u00d2\u00d3\7%\2\2\u00d3\61\3\2\2\2\u00d4\u00d6\5\32"+
+		"\16\2\u00d5\u00d4\3\2\2\2\u00d6\u00d7\3\2\2\2\u00d7\u00d5\3\2\2\2\u00d7"+
+		"\u00d8\3\2\2\2\u00d8\63\3\2\2\2\u00d9\u00db\5\32\16\2\u00da\u00d9\3\2"+
+		"\2\2\u00db\u00dc\3\2\2\2\u00dc\u00da\3\2\2\2\u00dc\u00dd\3\2\2\2\u00dd"+
+		"\65\3\2\2\2\u00de\u00df\5F$\2\u00df\u00e0\5H%\2\u00e0\67\3\2\2\2\u00e1"+
+		"\u00e2\7/\2\2\u00e29\3\2\2\2\u00e3\u00e5\5<\37\2\u00e4\u00e6\7/\2\2\u00e5"+
+		"\u00e4\3\2\2\2\u00e5\u00e6\3\2\2\2\u00e6;\3\2\2\2\u00e7\u00e8\7/\2\2\u00e8"+
+		"=\3\2\2\2\u00e9\u00ea\7/\2\2\u00ea?\3\2\2\2\u00eb\u00ec\7/\2\2\u00ecA"+
+		"\3\2\2\2\u00ed\u00ee\t\3\2\2\u00eeC\3\2\2\2\u00ef\u00f0\t\4\2\2\u00f0"+
+		"E\3\2\2\2\u00f1\u00f2\7\64\2\2\u00f2G\3\2\2\2\u00f3\u00f4\7\64\2\2\u00f4"+
+		"I\3\2\2\2\23UZioy\u0082\u0089\u0099\u009c\u00a2\u00a5\u00a9\u00ad\u00be"+
+		"\u00d7\u00dc\u00e5";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

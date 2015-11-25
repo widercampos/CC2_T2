@@ -14,7 +14,7 @@ corpo
 
 tags
 : link | texto | titulo | subtitulo | imagem | mapa
- | botao | slide_show | menu_fixo | definir | linha
+ | botao | menu_fixo | definir | linha
 ;
 
 menu_fixo
@@ -50,14 +50,8 @@ link
 : 'link' url nome_pagina 'fim-link'
 ;
 
-/*
-paragrafo
-: 'paragrafo' texto* 'fim-paragrafo'
-;
-*/
-
 texto
-:  'texto' estado? CADEIA 'fim-texto' | 'texto' estado? IDENT 'fim-texto'
+:  'texto' cor? estado? CADEIA 'fim-texto' | 'texto' cor? estado? IDENT 'fim-texto'
 ;
 
 botao
@@ -74,6 +68,10 @@ titulo
 
 subtitulo
 : 'subtitulo' CADEIA 'fim-subtitulo'
+;
+
+cor
+: nome_cor | IDENT
 ;
 
 cor_fundo
@@ -112,9 +110,22 @@ coordenadas
         : latitude longitude
         ;
 
+/* não funcionou :P
 slide_show
-        :'slide-show'(imagem texto?)+ 'fim-slide-show'
+        :'slide-show' nome_slide imagem_texto+ 'fim-slide-show'
+        ; */
+
+nome_slide
+        : CADEIA 
         ;
+
+imagem_texto
+    : imagem_slide CADEIA?
+    ;
+
+imagem_slide
+: CADEIA
+;
 
 titulo_site
 : CADEIA
@@ -141,12 +152,6 @@ COMENTARIO
 CADEIA
     : '"' ~('\n' | '\r' | '"')* '"'
     ;
-
-/*
-CADEIA:  ( 'a'..'z' | 'A'..'Z' | '_' | '+' | '-' | '*' | '!' | '?' | '&' | '@' | '/' |)+
-      ;
-*/
-
 
 ESP
 : 'offset1' | 'offset2' | 'offset3' | 'offset4' | 'offset5' | 'offset6' | 'offset7'| 'offset8' |

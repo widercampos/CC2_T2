@@ -20,6 +20,7 @@ public class AnalisadorSemantico extends PortHTMLBaseListener {
     }
 
     public boolean temErro() {
+        /* método pra ver se o semântico encontrou erros */
         return errou;
     }
 
@@ -27,9 +28,9 @@ public class AnalisadorSemantico extends PortHTMLBaseListener {
     public void enterDefinir(PortHTMLParser.DefinirContext ctx) {
         String nomeVar = ctx.IDENT().getSymbol().getText();
         if (tabela.existeSimbolo(nomeVar)) {
-            // ERRO: já existe
+            // erro: já existe
             int linha = ctx.IDENT().getSymbol().getLine();
-            System.out.println("Linha " + linha + ": ERRO semântico: variável " + nomeVar + " ja declarada anteriormente.");
+            System.out.println("Linha " + linha + ": erro semântico: variável \"" + nomeVar + "\" ja declarada anteriormente.");
             errou = true;
         } else /* ok, símbolo não declarado */ {
             tabela.adicionarSimbolo(nomeVar, "", ctx.CADEIA().getText());
@@ -41,9 +42,9 @@ public class AnalisadorSemantico extends PortHTMLBaseListener {
         if (ctx.IDENT() != null) /* usou variável */ {
             String nomeVar = ctx.IDENT().getSymbol().getText();
             if (!tabela.existeSimbolo(nomeVar)) {
-                // ERRO: variável não declarada
+                // erro: variável não declarada
                 int linha = ctx.IDENT().getSymbol().getLine();
-                System.out.println("Linha " + linha + ": ERRO semântico: variável " + nomeVar + " nao declarada.");
+                System.out.println("Linha " + linha + ": erro semântico: variável \"" + nomeVar + "\" nao declarada.");
                 errou = true;
             }
         } /* se não usou, não importa pro semântico */
@@ -55,9 +56,9 @@ public class AnalisadorSemantico extends PortHTMLBaseListener {
         if (ctx.IDENT() != null) /* usou variável */ {
             String nomeVar = ctx.IDENT().getSymbol().getText();
             if (!tabela.existeSimbolo(nomeVar)) {
-                // ERRO: variável não declarada
+                // erro: variável não declarada
                 int linha = ctx.IDENT().getSymbol().getLine();
-                System.out.println("Linha " + linha + ": ERRO semântico: variável " + nomeVar + " nao declarada.");
+                System.out.println("Linha " + linha + ": erro semântico: variável \"" + nomeVar + "\" nao declarada.");
                 errou = true;
             }
         } /* se não usou, não importa pro semântico */
@@ -68,56 +69,107 @@ public class AnalisadorSemantico extends PortHTMLBaseListener {
     public void enterLinha(PortHTMLParser.LinhaContext ctx) {
         // verificar se o usuário colocou soma maior que 12
         int soma = 0;
-        int span = 0; /* só inicializei pra compilar, mas é ctza que vai ter um 
-         * valor pelo switch abaixo, pq passou pelo sintático */
-
 
         for (PortHTMLParser.Coluna_tagsContext colTagCtx : ctx.coluna_tags()) {
             switch (colTagCtx.coluna().SPAN().getText()) {
                 case "span1":
-                    span = 1;
+                    soma += 1;
                     break;
                 case "span2":
-                    span = 2;
+                    soma += 2;
                     break;
                 case "span3":
-                    span = 3;
+                    soma += 3;
                     break;
                 case "span4":
-                    span = 4;
+                    soma += 4;
                     break;
                 case "span5":
-                    span = 5;
+                    soma += 5;
                     break;
                 case "span6":
-                    span = 6;
+                    soma += 6;
                     break;
                 case "span7":
-                    span = 7;
+                    soma += 7;
                     break;
                 case "span8":
-                    span = 8;
+                    soma += 8;
                     break;
                 case "span9":
-                    span = 9;
+                    soma += 9;
                     break;
                 case "span10":
-                    span = 10;
+                    soma += 10;
                     break;
                 case "span11":
-                    span = 11;
+                    soma += 11;
                     break;
                 case "span12":
-                    span = 12;
+                    soma += 12;
                     break;
             }
-            soma += span;
+
+            if (colTagCtx.coluna().ESP() != null) {
+                switch (colTagCtx.coluna().SPAN().getText()) {
+                    case "offset1":
+                        soma += 1;
+                        break;
+                    case "offset2":
+                        soma += 2;
+                        break;
+                    case "offset3":
+                        soma += 3;
+                        break;
+                    case "offset4":
+                        soma += 4;
+                        break;
+                    case "offset5":
+                        soma += 5;
+                        break;
+                    case "offset6":
+                        soma += 6;
+                        break;
+                    case "offset7":
+                        soma += 7;
+                        break;
+                    case "offset8":
+                        soma += 8;
+                        break;
+                    case "offset9":
+                        soma += 9;
+                        break;
+                    case "offset10":
+                        soma += 10;
+                        break;
+                    case "offset11":
+                        soma += 11;
+                        break;
+                    case "offset12":
+                        soma += 12;
+                        break;
+                }
+            }
         }
-        
+
         if (soma > 12) {
             int linha = ctx.getStart().getLine();
-            System.out.println("Linha " + linha + ": ERRO semântico: soma das colunas é maior que 12.");
+            System.out.println("Linha " + linha + ": erro semântico: soma das colunas é maior que 12.");
         }
+    }
+
+    @Override
+    public void enterCor(PortHTMLParser.CorContext ctx) {
+        if (ctx.IDENT() != null) {
+            String nomeVar = ctx.IDENT().getSymbol().getText();
+            if (!tabela.existeSimbolo(nomeVar)) {
+                // erro: variável não declarada
+                int linha = ctx.IDENT().getSymbol().getLine();
+                System.out.println("Linha " + linha + ": erro semântico: variável \"" + nomeVar + "\" nao declarada.");
+                errou = true;
+            }
+        } /* se não usou, não importa pro semântico */
+
     }
 
 }

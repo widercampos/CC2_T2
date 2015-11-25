@@ -1,4 +1,4 @@
-// Generated from C:\Users\J\Desktop\CC2\T2\src\t2\PortHTML.g4 by ANTLR 4.5.1
+// Generated from PortHTML.g4 by ANTLR 4.5.1
 package t2;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -220,6 +220,18 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCor(PortHTMLParser.CorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCor(PortHTMLParser.CorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCor_fundo(PortHTMLParser.Cor_fundoContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -328,13 +340,37 @@ public class PortHTMLBaseListener implements PortHTMLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSlide_show(PortHTMLParser.Slide_showContext ctx) { }
+	@Override public void enterNome_slide(PortHTMLParser.Nome_slideContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSlide_show(PortHTMLParser.Slide_showContext ctx) { }
+	@Override public void exitNome_slide(PortHTMLParser.Nome_slideContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImagem_texto(PortHTMLParser.Imagem_textoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImagem_texto(PortHTMLParser.Imagem_textoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImagem_slide(PortHTMLParser.Imagem_slideContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImagem_slide(PortHTMLParser.Imagem_slideContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
